@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Sudoku/src/menu.py&apos; to &apos;main.py&apos;" description="Rename resource &apos;menu.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/menu.py" name="main.py" stamp="1375051214917" updateReferences="true"/>
+</session>

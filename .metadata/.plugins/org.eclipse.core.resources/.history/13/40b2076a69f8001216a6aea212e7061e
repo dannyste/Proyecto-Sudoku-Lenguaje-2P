@@ -1,0 +1,23 @@
+'''
+Created on 28/07/2013
+
+@author: Danny
+'''
+from PyQt4.QtGui import QMainWindow
+from ui_principal import Ui_principal
+
+class Principal(QMainWindow):
+
+    def __init__(self):
+        QMainWindow._init_(self)
+        self.ui= Ui_principal()
+        self.ui.setupUi(self)
+                
+if __name__ == '__main__':
+    import sys
+    from PyQt4.QtGui import QApplication
+    app=QApplication(sys.argv)
+    p = Ui_principal()
+    p.ui.setupUi(Principal)
+    p.show()
+    sys.exit(app.exec_())

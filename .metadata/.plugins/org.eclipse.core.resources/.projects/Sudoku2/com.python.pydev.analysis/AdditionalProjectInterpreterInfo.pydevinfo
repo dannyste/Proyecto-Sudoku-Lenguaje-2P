@@ -1,0 +1,64 @@
+-- VERSION_3
+-- START DISKCACHE
+C:\Users\Danny\Documents\GitHub\Proyecto-Sudoku-Lenguaje-2P\.metadata\.plugins\org.eclipse.core.resources\.projects\Sudoku2\com.python.pydev.analysis\v1_indexcache
+.v1_indexcache
+ui_principal|0|C:\Users\Danny\Documents\GitHub\Proyecto-Sudoku-Lenguaje-2P\Sudoku2\ui_principal.py
+img_rc|0|C:\Users\Danny\Documents\GitHub\Proyecto-Sudoku-Lenguaje-2P\Sudoku2\img_rc.py
+principal|0|C:\Users\Danny\Documents\GitHub\Proyecto-Sudoku-Lenguaje-2P\Sudoku2\principal.py
+ui_acercade|0|C:\Users\Danny\Documents\GitHub\Proyecto-Sudoku-Lenguaje-2P\Sudoku2\ui_acercade.py
+acercade|0|C:\Users\Danny\Documents\GitHub\Proyecto-Sudoku-Lenguaje-2P\Sudoku2\acercade.py
+-- END DISKCACHE
+-- START DICTIONARY
+13
+12=Acercade.__init__
+5=img_rc
+1=ui_principal
+9=Ui_acercaDe.setupUi
+13=Principal.__init__
+6=Principal
+4=principal
+2=ui_acercade
+7=Acercade
+3=acercade
+8=Ui_principal.setupUi
+10=Ui_acercaDe
+11=Ui_principal
+-- END DICTIONARY
+-- START TREE 1
+13
+_en|2|_encoding!11@_encoding!19@
+_fr|4|_fromUtf8!10@_fromUtf8!11@_fromUtf8!19@_fromUtf8!18@
+_tr|2|_translate!18@_translate!10@
+ace|2|Acercade!25@acercaDe!19@
+app|3|app!11@app!35@app!19@
+mai|0|
+p|1|p!35@
+pri|2|Principal!33@principal!11@
+qcl|1|qCleanupResources!42@
+qin|1|qInitResources!42@
+qt_|3|qt_resource_data!43@qt_resource_name!43@qt_resource_struct!43@
+ui|3|ui!19@ui!11@ui!35@
+ui_|2|Ui_acercaDe!17@Ui_principal!9@
+-- END TREE
+-- START TREE 2
+19
+!<m|0|
+__i|2|__init__!6&34@__init__!7&26@
+ace|1|AcercaDe!8&11@
+app|0|
+car|1|CargaJuego!8&11@
+cen|2|centralwidget!8&11@centralwidget!9&19@
+est|1|Estadisticas!8&11@
+h|0|
+ico|1|icono!8&11@
+lab|6|label_2!9&19@label_3!9&19@label_5!9&19@label!9&19@label_4!9&19@label_6!9&19@
+mos|1|mostrar!6&34@
+nue|1|nuevoJuego!8&11@
+p|0|
+pri|0|
+pus|1|pushButton!9&19@
+ret|2|retranslateUi!10&18@retranslateUi!11&10@
+sal|1|salir!8&11@
+set|2|setupUi!11&10@setupUi!10&18@
+ui|2|ui!12&27@ui!13&35@
+-- END TREE
