@@ -26,6 +26,7 @@ class Principal(QMainWindow):
     
     def onAcercadeClicked(self):        
         self.a = Acercade()
+        self.a.onRegresar(self)
         self.a.setVisible(True)        
         self.close()
         
