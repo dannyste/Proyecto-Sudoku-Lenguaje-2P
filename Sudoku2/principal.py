@@ -5,6 +5,7 @@ Created on 28/07/2013
 '''
 from PyQt4.QtGui import QMainWindow
 from ui_principal import Ui_principal
+from nuevojuego import Nuevojuego
 from acercade import Acercade
 
 class Principal(QMainWindow):
@@ -14,12 +15,18 @@ class Principal(QMainWindow):
         self.ui= Ui_principal()
         self.ui.setupUi(self)
         self.show()
+        self.ui.nuevoJuego.clicked.connect(self.onNuevojuegoClicked)
         self.ui.AcercaDe.clicked.connect(self.onAcercadeClicked)
         self.ui.salir.clicked.connect(self.onSalirClicked)
     
+    def onNuevojuegoClicked(self):
+        self.n= Nuevojuego()
+        self.n.setVisible(True)
+        self.close()
+    
     def onAcercadeClicked(self):        
-        self.w = Acercade()
-        self.w.setVisible(True)        
+        self.a = Acercade()
+        self.a.setVisible(True)        
         self.close()
         
     def onSalirClicked(self):

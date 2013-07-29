@@ -1,0 +1,181 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'nuevojuego.ui'
+#
+# Created: Mon Jul 29 13:39:22 2013
+#      by: PyQt4 UI code generator 4.10.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_NuevoJuego(object):
+    def setupUi(self, NuevoJuego):
+        NuevoJuego.setObjectName(_fromUtf8("NuevoJuego"))
+        NuevoJuego.setWindowModality(QtCore.Qt.NonModal)
+        NuevoJuego.resize(532, 426)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/sudoku1.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        NuevoJuego.setWindowIcon(icon)
+        NuevoJuego.setStyleSheet(_fromUtf8("#centralwidget{background-image: url(:/img/fondo3.jpg)}"))
+        self.centralwidget = QtGui.QWidget(NuevoJuego)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.rBMedio = QtGui.QRadioButton(self.centralwidget)
+        self.rBMedio.setGeometry(QtCore.QRect(160, 210, 91, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Segoe Print"))
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.rBMedio.setFont(font)
+        self.rBMedio.setAcceptDrops(False)
+        self.rBMedio.setObjectName(_fromUtf8("rBMedio"))
+        self.rBDificil = QtGui.QRadioButton(self.centralwidget)
+        self.rBDificil.setGeometry(QtCore.QRect(290, 210, 81, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Segoe Print"))
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.rBDificil.setFont(font)
+        self.rBDificil.setAcceptDrops(False)
+        self.rBDificil.setObjectName(_fromUtf8("rBDificil"))
+        self.rBFacil = QtGui.QRadioButton(self.centralwidget)
+        self.rBFacil.setGeometry(QtCore.QRect(50, 210, 71, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Segoe Print"))
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.rBFacil.setFont(font)
+        self.rBFacil.setAcceptDrops(False)
+        self.rBFacil.setObjectName(_fromUtf8("rBFacil"))
+        self.pBJugar = QtGui.QPushButton(self.centralwidget)
+        self.pBJugar.setGeometry(QtCore.QRect(350, 350, 71, 71))
+        self.pBJugar.setText(_fromUtf8(""))
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/sudoku.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pBJugar.setIcon(icon1)
+        self.pBJugar.setIconSize(QtCore.QSize(60, 60))
+        self.pBJugar.setFlat(True)
+        self.pBJugar.setObjectName(_fromUtf8("pBJugar"))
+        self.pBCancelar = QtGui.QPushButton(self.centralwidget)
+        self.pBCancelar.setGeometry(QtCore.QRect(100, 350, 81, 61))
+        self.pBCancelar.setText(_fromUtf8(""))
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/back.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pBCancelar.setIcon(icon2)
+        self.pBCancelar.setIconSize(QtCore.QSize(64, 64))
+        self.pBCancelar.setFlat(True)
+        self.pBCancelar.setObjectName(_fromUtf8("pBCancelar"))
+        self.rBExperto = QtGui.QRadioButton(self.centralwidget)
+        self.rBExperto.setGeometry(QtCore.QRect(400, 210, 111, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Segoe Print"))
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.rBExperto.setFont(font)
+        self.rBExperto.setAcceptDrops(False)
+        self.rBExperto.setObjectName(_fromUtf8("rBExperto"))
+        self.label = QtGui.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(30, 10, 471, 131))
+        self.label.setStyleSheet(_fromUtf8("#label{background-image:  url(:/img/TituloIco.png);}"))
+        self.label.setText(_fromUtf8(""))
+        self.label.setObjectName(_fromUtf8("label"))
+        self.label_2 = QtGui.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(50, 150, 331, 41))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("GrilledCheese BTN Toasted"))
+        font.setPointSize(18)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet(_fromUtf8("#label_2{font: 18pt \"GrilledCheese BTN Toasted\";}\n"
+""))
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.gbOpAlert = QtGui.QGroupBox(self.centralwidget)
+        self.gbOpAlert.setGeometry(QtCore.QRect(30, 250, 301, 91))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("GrilledCheese BTN Toasted"))
+        font.setPointSize(13)
+        self.gbOpAlert.setFont(font)
+        self.gbOpAlert.setObjectName(_fromUtf8("gbOpAlert"))
+        self.cbInvalidas = QtGui.QCheckBox(self.gbOpAlert)
+        self.cbInvalidas.setGeometry(QtCore.QRect(20, 40, 221, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Segoe Print"))
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.cbInvalidas.setFont(font)
+        self.cbInvalidas.setObjectName(_fromUtf8("cbInvalidas"))
+        self.cbIncorrectas = QtGui.QCheckBox(self.gbOpAlert)
+        self.cbIncorrectas.setGeometry(QtCore.QRect(20, 70, 231, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Segoe Print"))
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.cbIncorrectas.setFont(font)
+        self.cbIncorrectas.setObjectName(_fromUtf8("cbIncorrectas"))
+        self.gbOpAyuda = QtGui.QGroupBox(self.centralwidget)
+        self.gbOpAyuda.setGeometry(QtCore.QRect(340, 250, 151, 91))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("GrilledCheese BTN Toasted"))
+        font.setPointSize(13)
+        self.gbOpAyuda.setFont(font)
+        self.gbOpAyuda.setObjectName(_fromUtf8("gbOpAyuda"))
+        self.cbhelp = QtGui.QCheckBox(self.gbOpAyuda)
+        self.cbhelp.setGeometry(QtCore.QRect(20, 50, 111, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Segoe Print"))
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.cbhelp.setFont(font)
+        self.cbhelp.setObjectName(_fromUtf8("cbhelp"))
+        NuevoJuego.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(NuevoJuego)
+        QtCore.QMetaObject.connectSlotsByName(NuevoJuego)
+
+    def retranslateUi(self, NuevoJuego):
+        NuevoJuego.setWindowTitle(_translate("NuevoJuego", "Sudoku", None))
+        self.rBMedio.setText(_translate("NuevoJuego", "Medio", None))
+        self.rBDificil.setText(_translate("NuevoJuego", "Difícil", None))
+        self.rBFacil.setText(_translate("NuevoJuego", "Fácil", None))
+        self.rBExperto.setText(_translate("NuevoJuego", "Experto", None))
+        self.label_2.setText(_translate("NuevoJuego", "Elija la dificultad:", None))
+        self.gbOpAlert.setTitle(_translate("NuevoJuego", "Opciones de Alertas", None))
+        self.cbInvalidas.setText(_translate("NuevoJuego", "Alerta de Jugadas Invalidas", None))
+        self.cbIncorrectas.setText(_translate("NuevoJuego", "Alerta de Jugadas Incorrectas", None))
+        self.gbOpAyuda.setTitle(_translate("NuevoJuego", "Ayuda", None))
+        self.cbhelp.setText(_translate("NuevoJuego", "Boton Ayuda", None))
+
+import img_rc
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    NuevoJuego = QtGui.QMainWindow()
+    ui = Ui_NuevoJuego()
+    ui.setupUi(NuevoJuego)
+    NuevoJuego.show()
+    sys.exit(app.exec_())
+
