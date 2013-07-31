@@ -5,13 +5,21 @@ Created on 30/07/2013
 '''
 from PyQt4.QtGui import QMainWindow
 from ui_sudoku import Ui_Sudoku
+from PyQt4.uic.properties import QtGui
 
 class Sudoku(QMainWindow):
 
-    def __init__(self):
+    def __init__(self,dificultad,incorrecta,invalida,ayuda):
         QMainWindow.__init__(self)
         self.ui= Ui_Sudoku()
         self.ui.setupUi(self)
+        self.dificultad=dificultad
+        self.incorrecta=incorrecta
+        self.invalida=invalida
+        if ayuda==False:
+            self.ui.btHelp.setEnabled(False)
+        #for i in range(9):
+            #for j in range(9):
         self.ui.pBf1.clicked.connect(self.onPbf1Clicked)
         self.ui.pBf2.clicked.connect(self.onPbf2Clicked)
         self.ui.pBf3.clicked.connect(self.onPbf3Clicked)
