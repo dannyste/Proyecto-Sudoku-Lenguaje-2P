@@ -3,9 +3,9 @@ Created on 30/07/2013
 
 @author: Edwin
 '''
-from PyQt4.QtGui import QMainWindow
+from PyQt4.QtGui import QMainWindow,QPushButton
+from PyQt4.QtCore import QSize
 from ui_sudoku import Ui_Sudoku
-from PyQt4.uic.properties import QtGui
 
 class Sudoku(QMainWindow):
 
@@ -18,8 +18,7 @@ class Sudoku(QMainWindow):
         self.invalida=invalida
         if ayuda==False:
             self.ui.btHelp.setEnabled(False)
-        #for i in range(9):
-            #for j in range(9):
+        self.initGui()
         self.ui.pBf1.clicked.connect(self.onPbf1Clicked)
         self.ui.pBf2.clicked.connect(self.onPbf2Clicked)
         self.ui.pBf3.clicked.connect(self.onPbf3Clicked)
@@ -30,6 +29,20 @@ class Sudoku(QMainWindow):
         self.ui.pBf8.clicked.connect(self.onPbf8Clicked)
         self.ui.pBf9.clicked.connect(self.onPbf9Clicked)
         self.ui.btHelp.clicked.connect(self.onBtHelpClicked)
+        
+    def initGui(self):
+        self.cajas=[]
+        for i in range(9):
+            self.qpushbutton=[]
+            for j in range(9):
+                self.qpushbutton.append(QPushButton(self))
+            self.cajas.append(self.qpushbutton)
+        for i in range(9):
+            for j in range(9):
+                self.cajas[i][j].resize(QSize(52, 52))
+                self.cajas[i][j].setAccessibleName("0")
+                self.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
+                self.ui.gLTablero.addWidget(self.cajas[i][j],i,j)
         
     def onPbf1Clicked(self):
         self.numero = 1
