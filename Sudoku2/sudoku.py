@@ -4,8 +4,9 @@ Created on 30/07/2013
 @author: Edwin
 '''
 from PyQt4.QtGui import QMainWindow,QPushButton
-from PyQt4.QtCore import QSize
+from PyQt4.QtCore import QSize,SIGNAL,SLOT 
 from ui_sudoku import Ui_Sudoku
+from graficador import Graficador
 
 class Sudoku(QMainWindow):
 
@@ -18,6 +19,8 @@ class Sudoku(QMainWindow):
         self.invalida=invalida
         if ayuda==False:
             self.ui.btHelp.setEnabled(False)
+        self.graficador=Graficador(self)
+        self.graficador.initArregloImgFichas()
         self.initGui()
         self.ui.pBf1.clicked.connect(self.onPbf1Clicked)
         self.ui.pBf2.clicked.connect(self.onPbf2Clicked)
@@ -31,18 +34,29 @@ class Sudoku(QMainWindow):
         self.ui.btHelp.clicked.connect(self.onBtHelpClicked)
         
     def initGui(self):
+        self.Bmetodo=0
         self.cajas=[]
         for i in range(9):
-            self.qpushbutton=[]
+            qpushbutton=[]
             for j in range(9):
-                self.qpushbutton.append(QPushButton(self))
-            self.cajas.append(self.qpushbutton)
+                qpushbutton.append(QPushButton(self))
+            self.cajas.append(qpushbutton)
         for i in range(9):
             for j in range(9):
-                self.cajas[i][j].resize(QSize(52, 52))
+                self.cajas[i][j].setIcon(self.imgFichas[0])
+                self.cajas[i][j].setIconSize(QSize(48, 48))
                 self.cajas[i][j].setAccessibleName("0")
                 self.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
                 self.ui.gLTablero.addWidget(self.cajas[i][j],i,j)
+                self.cajas[i][j].clicked.connect(self.someFunc)
+        
+    def someFunc(self):
+        if self.Bmetodo==1:
+            self.boton=QPushButton(self)
+            self.boton=self.sender()
+            self.boton.setIcon(self.imgFichas[self.numero])
+            self.boton.setIconSize(QSize(48, 48))
+            self.Bmetodo=0
         
     def onPbf1Clicked(self):
         self.numero = 1
