@@ -4,7 +4,7 @@ Created on 30/07/2013
 @author: Edwin
 '''
 from PyQt4.QtGui import QMainWindow,QPushButton
-from PyQt4.QtCore import QSize,SIGNAL,SLOT 
+from PyQt4.QtCore import QSize,SIGNAL,SLOT,QTime,QTimer,QString
 from ui_sudoku import Ui_Sudoku
 from graficador import Graficador
 
@@ -14,6 +14,16 @@ class Sudoku(QMainWindow):
         QMainWindow.__init__(self)
         self.ui= Ui_Sudoku()
         self.ui.setupUi(self)
+        
+        self.tiempo = QTime()
+        self.tiempo.setHMS(0,0,0,0)
+        self.timer = QTimer()
+        self.connect(self.timer, SIGNAL("timeout()"),self.onMostrarTiempo)
+        self.segundos = 0
+        QString.text = self.tiempo.toString("hh:mm:ss")
+        self.ui.contTiempo.display(QString.text)
+        self.timer.start(1000)
+        
         self.dificultad=dificultad
         self.incorrecta=incorrecta
         self.invalida=invalida
@@ -98,5 +108,12 @@ class Sudoku(QMainWindow):
         self.numero = 0
         self.Bmetodo = 1
         
+    def onMostrarTiempo(self):
+        self.nuevoTiempo = QTime
+        self.segundos = self.segundos + 1
+        self.nuevoTiempo = self.tiempo.addSecs(self.segundos)
+        self.cronometro = self.nuevoTiempo.toString("hh:mm:ss")
+        self.ui.contTiempo.display(self.cronometro)
+
     
     
