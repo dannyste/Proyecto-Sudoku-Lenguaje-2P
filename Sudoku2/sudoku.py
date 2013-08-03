@@ -4,33 +4,24 @@ Created on 30/07/2013
 @author: Edwin
 '''
 from PyQt4.QtGui import QMainWindow,QPushButton
-from PyQt4.QtCore import QSize,SIGNAL,SLOT,QTime,QTimer,QString
+from PyQt4.QtCore import QSize,SIGNAL,QTime,QTimer
 from ui_sudoku import Ui_Sudoku
-from graficador import Graficador
+from validador import Validador
 
 class Sudoku(QMainWindow):
 
     def __init__(self,dificultad,incorrecta,invalida,ayuda):
         QMainWindow.__init__(self)
         self.ui= Ui_Sudoku()
-        self.ui.setupUi(self)
-        
-        self.tiempo = QTime()
-        self.tiempo.setHMS(0,0,0,0)
-        self.timer = QTimer()
-        self.connect(self.timer, SIGNAL("timeout()"),self.onMostrarTiempo)
-        self.segundos = 0
-        QString.text = self.tiempo.toString("hh:mm:ss")
-        self.ui.contTiempo.display(QString.text)
-        self.timer.start(1000)
-        
+        self.ui.setupUi(self)        
         self.dificultad=dificultad
         self.incorrecta=incorrecta
         self.invalida=invalida
         if ayuda==False:
             self.ui.btHelp.setEnabled(False)
-        self.graficador=Graficador(self)
-        self.graficador.initArregloImgFichas()
+        self.initCronometro()
+        self.validador=Validador(self)
+        self.validador.graficador.initArregloImgFichas()
         self.initGui()
         self.ui.pBf1.clicked.connect(self.onPbf1Clicked)
         self.ui.pBf2.clicked.connect(self.onPbf2Clicked)
@@ -42,6 +33,23 @@ class Sudoku(QMainWindow):
         self.ui.pBf8.clicked.connect(self.onPbf8Clicked)
         self.ui.pBf9.clicked.connect(self.onPbf9Clicked)
         self.ui.btHelp.clicked.connect(self.onBtHelpClicked)
+        
+    def initCronometro(self):
+        self.tiempo = QTime()
+        self.tiempo.setHMS(0,0,0,0)
+        self.timer = QTimer()
+        self.connect(self.timer, SIGNAL("timeout()"),self.mostrarTiempo)
+        self.segundos = 0
+        self.text = self.tiempo.toString("hh:mm:ss")
+        self.ui.contTiempo.display(self.text)
+        self.timer.start(1000)
+        
+    def mostrarTiempo(self):
+        self.nuevoTiempo = QTime()
+        self.segundos = self.segundos + 1
+        self.nuevoTiempo = self.tiempo.addSecs(self.segundos)
+        self.cronometro = self.nuevoTiempo.toString("hh:mm:ss")
+        self.ui.contTiempo.display(self.cronometro)
         
     def initGui(self):
         self.Bmetodo=0
@@ -58,9 +66,10 @@ class Sudoku(QMainWindow):
                 self.cajas[i][j].setAccessibleName("0")
                 self.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
                 self.ui.gLTablero.addWidget(self.cajas[i][j],i,j)
-                self.cajas[i][j].clicked.connect(self.someFunc)
+                self.cajas[i][j].clicked.connect(self.onColocarFicha)
+        self.validador.Relacionar()
         
-    def someFunc(self):
+    def onColocarFicha(self):
         if self.Bmetodo==1:
             self.boton=QPushButton(self)
             self.boton=self.sender()
@@ -107,13 +116,3 @@ class Sudoku(QMainWindow):
     def onBtHelpClicked(self):
         self.numero = 0
         self.Bmetodo = 1
-        
-    def onMostrarTiempo(self):
-        self.nuevoTiempo = QTime
-        self.segundos = self.segundos + 1
-        self.nuevoTiempo = self.tiempo.addSecs(self.segundos)
-        self.cronometro = self.nuevoTiempo.toString("hh:mm:ss")
-        self.ui.contTiempo.display(self.cronometro)
-
-    
-    

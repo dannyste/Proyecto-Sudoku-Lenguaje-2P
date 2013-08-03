@@ -41,3 +41,21 @@ class Graficador:
         nueve = QIcon()
         nueve.addPixmap(QPixmap(":/img/9.png"),QIcon.Normal,QIcon.Off)
         self.sudoku.imgFichas.append(nueve)
+        
+    def pintaX(self,i):
+        for j in range(9):
+            self.sudoku.cajas[i][j].setStyleSheet("*{background-color: rgb(255, 255, 127)}");
+            
+    def pintaY(self,j):
+        for i in range(9):
+            self.sudoku.cajas[i][j].setStyleSheet("*{background-color: rgb(255, 255, 127)}");
+    
+    def pintaSub(self,x,y):
+        for i in range(x,x+3):
+            for j in range(y,y+3):
+                self.sudoku.cajas[i][j].setStyleSheet("*{background-color: rgb(255, 255, 127)}");
+                
+    def pintaTablero(self):
+        for i in range(9):
+            for j in range(9):
+                self.sudoku.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
