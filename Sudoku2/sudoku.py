@@ -8,6 +8,7 @@ from PyQt4.QtCore import QSize,SIGNAL,QTime,QTimer
 from ui_sudoku import Ui_Sudoku
 from validador import Validador
 import ctypes
+import random
 
 class Sudoku(QMainWindow):
 
@@ -20,6 +21,8 @@ class Sudoku(QMainWindow):
         self.invalida=invalida
         if ayuda==False:
             self.ui.btHelp.setEnabled(False)
+        else:
+            self.ayudas=0
         self.initCronometro()
         self.validador=Validador(self)
         self.validador.graficador.initArregloImgFichas()
@@ -37,6 +40,7 @@ class Sudoku(QMainWindow):
         self.ui.btHelp.clicked.connect(self.onBtHelpClicked)
         self.MessageBox= ctypes.windll.user32.MessageBoxA
         self.MB_ICONERROR = 0x00000010L #Critical Icon
+        self.MB_ICONEXCLAMATION= 0x00000030L #Exclamation Icon
     
     def initCronometro(self):
         self.tiempo = QTime()
@@ -72,6 +76,9 @@ class Sudoku(QMainWindow):
                 self.ui.gLTablero.addWidget(self.cajas[i][j],i,j)
                 self.cajas[i][j].clicked.connect(self.onColocarFicha)
         self.validador.Relacionar()
+        if self.dificultad!=5:
+            self.leerArchivoSudokuResuelto()
+            self.llenaTableroDificultad()
         
     def onColocarFicha(self):
         caja=QPushButton()
@@ -81,17 +88,27 @@ class Sudoku(QMainWindow):
                 self.posFichas[i].setIcon(self.imgFichas[0])
             self.muestraPosiblesFichas(caja)
         else:
-            nAct=str(self.numero)
-            nAnt=caja.accessibleName()
-            caja.setAccessibleName(nAct)
-            self.validador.Relacionar()
-            if (self.validador.Validaciones()):
-                caja.setIcon(self.imgFichas[self.numero])
-                caja.setIconSize(QSize(48, 48))
-                caja.setStyleSheet("*{background-color:rgb(158,209,247)}")
+            if self.numero==0:
+                self.ayudas = self.ayudas + 1
+                self.opcionAyuda(caja)
+                if self.ayudas==5:
+                    self.ui.btHelp.setEnabled(False)
             else:
-                caja.setAccessibleName(nAnt)
+                nAct=str(self.numero)
+                nAnt=caja.accessibleName()
+                caja.setAccessibleName(nAct)
                 self.validador.Relacionar()
+                if (self.validador.Validaciones()):
+                    caja.setIcon(self.imgFichas[self.numero])
+                    caja.setIconSize(QSize(48, 48))
+                    caja.setStyleSheet("*{background-color:rgb(158,209,247)}")
+                else:
+                    caja.setAccessibleName(nAnt)
+                    self.validador.Relacionar()
+            if (self.validador.ValidarEspaciosVacios()):
+                self.MessageBox(None,"Sudoku Correcto..!","FELICITACIONES",self.MB_ICONEXCLAMATION)
+            for i in range(9):
+                self.posFichas[i].setIcon(self.imgFichas[0])
             self.Bmetodo=0
         
     def initArregloPistas(self):
@@ -123,7 +140,63 @@ class Sudoku(QMainWindow):
             for j in range(3):
                 self.ui.glPistas.addWidget(self.posFichas[k],i,j)
                 k=k+1
-        
+                
+    def opcionAyuda(self,caja):
+        indice=self.ui.gLTablero.indexOf(caja)
+        contador=0
+        for i in range(9):
+            for j in range(9):
+                if indice==contador:
+                    self.numeros[i][j]=self.resuelto[i][j]
+                    nAct=str(self.resuelto[i][j])
+                    caja.setAccessibleName(nAct)
+                    caja.setIcon(self.imgFichas[self.resuelto[i][j]])
+                    caja.setIconSize(QSize(48, 48))
+                    caja.setStyleSheet("*{background-color:rgb(158,209,247)}")
+                contador = contador +1
+                
+    def llenaTableroDificultad(self):
+        self.setDificultad()
+        for i in range(self.nroFichas):
+            f=random.randint(0, 8)
+            c=random.randint(0, 8)
+            while (self.numeros[f][c]!=0):
+                f=random.randint(0, 8)
+                c=random.randint(0, 8)
+            self.numeros[f][c]=self.resuelto[f][c]
+            self.cajas[f][c].setAccessibleName(str(self.numeros[f][c]))
+        self.convertirInttoImg()
+    
+    def setDificultad(self):
+        if self.dificultad==1:
+            self.nroFichas=(81-35)
+        elif self.dificultad==2:
+            self.nroFichas=(81-50)
+        elif self.dificultad==3:
+            self.nroFichas=(81-63)
+        else:
+            self.nroFichas=(81-64)
+    
+    def convertirInttoImg(self):
+        for i in range(9):
+            for j in range(9):
+                self.cajas[i][j].setIcon(self.imgFichas[self.numeros[i][j]])
+                self.cajas[i][j].setIconSize(QSize(48, 48))
+                self.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
+                
+    def leerArchivoSudokuResuelto(self):
+        archivo=open('Soluciones.txt','r')
+        linea=archivo.readline()
+        k=0
+        self.resuelto=[]
+        for i in range(9):
+            numeros=[]
+            for j in range(9):
+                numeros.append(int(linea[k]))
+                k=k+1
+            self.resuelto.append(numeros)
+        archivo.close()
+    
     def onPbf1Clicked(self):
         self.numero = 1
         self.Bmetodo = 1
