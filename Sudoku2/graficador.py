@@ -4,6 +4,7 @@ Created on 01/08/2013
 @author: Danny
 '''
 from PyQt4.QtGui import QIcon,QPixmap
+
 class Graficador:
 
     def __init__(self,Sudoku):

@@ -7,8 +7,6 @@ from PyQt4.QtGui import QMainWindow
 from ui_nuevojuego import Ui_NuevoJuego
 from sudoku import Sudoku
 import ctypes
-MessageBox= ctypes.windll.user32.MessageBoxA
-MB_ICONERROR = 0x00000010L #Critical Icon
 
 class Nuevojuego(QMainWindow):
 
@@ -17,6 +15,9 @@ class Nuevojuego(QMainWindow):
         self.ui= Ui_NuevoJuego()
         self.ui.setupUi(self)
         self.ui.pBJugar.clicked.connect(self.onPbjugarClicked)
+        self.ui.pBCancelar.clicked.connect(self.onPbcancelarClicked)
+        self.MessageBox= ctypes.windll.user32.MessageBoxA
+        self.MB_ICONERROR = 0x00000010L #Critical Icon
         
     def onPbjugarClicked(self):
         facil=self.ui.rBFacil.isChecked()
@@ -26,11 +27,10 @@ class Nuevojuego(QMainWindow):
         incorrecta=self.ui.cbIncorrectas.isChecked()
         invalida=self.ui.cbInvalidas.isChecked()
         ayuda=self.ui.cbhelp.isChecked()
-        
         if facil==False and medio==False and dificil==False and experto==False:
-            MessageBox(None,"Seleccione Un Nivel De Dificultad..!","ERROR",MB_ICONERROR)
+            self.MessageBox(None,"Seleccione Un Nivel De Dificultad..!","ERROR",self.MB_ICONERROR)
         elif incorrecta==False and invalida==False:
-            MessageBox(None,"Seleccione al menos una opcion de alertas..!","ERROR",MB_ICONERROR)
+            self.MessageBox(None,"Seleccione al menos una opcion de alertas..!","ERROR",self.MB_ICONERROR)
         elif facil:
             self.n= Sudoku(1,incorrecta,invalida,ayuda)
             self.n.setVisible(True)
@@ -47,3 +47,10 @@ class Nuevojuego(QMainWindow):
             self.n= Sudoku(1,incorrecta,invalida,ayuda)
             self.n.setVisible(True)
             self.close()
+            
+    def Regresar(self,p):
+        self.r=p
+        
+    def onPbcancelarClicked(self):
+        self.hide()
+        self.r.show()

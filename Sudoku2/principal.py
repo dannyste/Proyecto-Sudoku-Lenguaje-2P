@@ -21,12 +21,13 @@ class Principal(QMainWindow):
     
     def onNuevojuegoClicked(self):
         self.n= Nuevojuego()
+        self.n.Regresar(self)
         self.n.setVisible(True)
         self.close()
     
     def onAcercadeClicked(self):        
         self.a = Acercade()
-        self.a.onRegresar(self)
+        self.a.Regresar(self)
         self.a.setVisible(True)        
         self.close()
         

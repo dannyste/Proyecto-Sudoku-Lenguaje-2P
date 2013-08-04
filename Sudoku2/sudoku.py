@@ -7,6 +7,7 @@ from PyQt4.QtGui import QMainWindow,QPushButton
 from PyQt4.QtCore import QSize,SIGNAL,QTime,QTimer
 from ui_sudoku import Ui_Sudoku
 from validador import Validador
+import ctypes
 
 class Sudoku(QMainWindow):
 
@@ -22,6 +23,7 @@ class Sudoku(QMainWindow):
         self.initCronometro()
         self.validador=Validador(self)
         self.validador.graficador.initArregloImgFichas()
+        self.initArregloPistas()
         self.initGui()
         self.ui.pBf1.clicked.connect(self.onPbf1Clicked)
         self.ui.pBf2.clicked.connect(self.onPbf2Clicked)
@@ -33,7 +35,9 @@ class Sudoku(QMainWindow):
         self.ui.pBf8.clicked.connect(self.onPbf8Clicked)
         self.ui.pBf9.clicked.connect(self.onPbf9Clicked)
         self.ui.btHelp.clicked.connect(self.onBtHelpClicked)
-        
+        self.MessageBox= ctypes.windll.user32.MessageBoxA
+        self.MB_ICONERROR = 0x00000010L #Critical Icon
+    
     def initCronometro(self):
         self.tiempo = QTime()
         self.tiempo.setHMS(0,0,0,0)
@@ -57,7 +61,7 @@ class Sudoku(QMainWindow):
         for i in range(9):
             qpushbutton=[]
             for j in range(9):
-                qpushbutton.append(QPushButton(self))
+                qpushbutton.append(QPushButton())
             self.cajas.append(qpushbutton)
         for i in range(9):
             for j in range(9):
@@ -70,12 +74,55 @@ class Sudoku(QMainWindow):
         self.validador.Relacionar()
         
     def onColocarFicha(self):
-        if self.Bmetodo==1:
-            self.boton=QPushButton(self)
-            self.boton=self.sender()
-            self.boton.setIcon(self.imgFichas[self.numero])
-            self.boton.setIconSize(QSize(48, 48))
+        caja=QPushButton()
+        caja=self.sender()
+        if self.Bmetodo==0:
+            for i in range(9):
+                self.posFichas[i].setIcon(self.imgFichas[0])
+            self.muestraPosiblesFichas(caja)
+        else:
+            nAct=str(self.numero)
+            nAnt=caja.accessibleName()
+            caja.setAccessibleName(nAct)
+            self.validador.Relacionar()
+            if (self.validador.Validaciones()):
+                caja.setIcon(self.imgFichas[self.numero])
+                caja.setIconSize(QSize(48, 48))
+                caja.setStyleSheet("*{background-color:rgb(158,209,247)}")
+            else:
+                caja.setAccessibleName(nAnt)
+                self.validador.Relacionar()
             self.Bmetodo=0
+        
+    def initArregloPistas(self):
+        self.posFichas=[]
+        for i in range(9):
+            self.posFichas.append(QPushButton())
+            self.posFichas[i].setIcon(self.imgFichas[0])
+            self.posFichas[i].setIconSize(QSize(48, 48))
+            self.posFichas[i].setFlat(True)
+            
+    def muestraPosiblesFichas(self,caja):
+        contador=0
+        for i in range(1,10):
+            nAct=str(i)
+            nAnt=caja.accessibleName()
+            caja.setAccessibleName(nAct)
+            self.validador.Relacionar()
+            if (self.validador.ValidarX() and self.validador.ValidarY() and self.validador.SubCuadros()):
+                self.posFichas[contador].setIcon(self.imgFichas[i])
+                contador = contador + 1
+            self.validador.graficador.pintaTablero()
+            caja.setAccessibleName(nAnt)
+            self.validador.Relacionar()
+            self.mostrarPistas()
+            
+    def mostrarPistas(self):
+        k=0
+        for i in range(3):
+            for j in range(3):
+                self.ui.glPistas.addWidget(self.posFichas[k],i,j)
+                k=k+1
         
     def onPbf1Clicked(self):
         self.numero = 1

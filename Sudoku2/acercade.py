@@ -14,13 +14,9 @@ class Acercade(QMainWindow):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.onPushbuttonClicked)
         
-    def onRegresar(self,d):
-        self.r = d
+    def Regresar(self,p):
+        self.r = p
         
     def onPushbuttonClicked(self):
-        self.hide()
+        self.close()
         self.r.show()
-        
-        
-        
-        
