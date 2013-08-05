@@ -24,27 +24,27 @@ class Nuevojuego(QMainWindow):
         medio=self.ui.rBMedio.isChecked()
         dificil=self.ui.rBDificil.isChecked()
         experto=self.ui.rBExperto.isChecked()
-        incorrecta=self.ui.cbIncorrectas.isChecked()
         invalida=self.ui.cbInvalidas.isChecked()
+        incorrecta=self.ui.cbIncorrectas.isChecked()
         ayuda=self.ui.cbhelp.isChecked()
         if facil==False and medio==False and dificil==False and experto==False:
             self.MessageBox(None,"Seleccione Un Nivel De Dificultad..!","ERROR",self.MB_ICONERROR)
-        elif incorrecta==False and invalida==False:
+        elif invalida==False and incorrecta==False:
             self.MessageBox(None,"Seleccione al menos una opcion de alertas..!","ERROR",self.MB_ICONERROR)
         elif facil:
-            self.n= Sudoku(1,incorrecta,invalida,ayuda)
+            self.n= Sudoku(1,invalida,incorrecta,ayuda)
             self.n.setVisible(True)
             self.close()
         elif medio:
-            self.n= Sudoku(1,incorrecta,invalida,ayuda)
+            self.n= Sudoku(1,invalida,incorrecta,ayuda)
             self.n.setVisible(True)
             self.close()
         elif dificil:
-            self.n= Sudoku(1,incorrecta,invalida,ayuda)
+            self.n= Sudoku(1,invalida,incorrecta,ayuda)
             self.n.setVisible(True)
             self.close()
         elif experto:
-            self.n= Sudoku(1,incorrecta,invalida,ayuda)
+            self.n= Sudoku(1,invalida,incorrecta,ayuda)
             self.n.setVisible(True)
             self.close()
             

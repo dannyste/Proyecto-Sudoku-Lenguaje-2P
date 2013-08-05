@@ -12,14 +12,15 @@ import random
 
 class Sudoku(QMainWindow):
 
-    def __init__(self,dificultad,incorrecta,invalida,ayuda):
+    def __init__(self,dificultad,invalida,incorrecta,ayuda):
         QMainWindow.__init__(self)
         self.ui= Ui_Sudoku()
         self.ui.setupUi(self)        
         self.dificultad=dificultad
-        self.incorrecta=incorrecta
         self.invalida=invalida
-        if ayuda==False:
+        self.incorrecta=incorrecta
+        self.ayuda=ayuda
+        if self.ayuda==False:
             self.ui.btHelp.setEnabled(False)
         else:
             self.ayudas=0
@@ -38,6 +39,9 @@ class Sudoku(QMainWindow):
         self.ui.pBf8.clicked.connect(self.onPbf8Clicked)
         self.ui.pBf9.clicked.connect(self.onPbf9Clicked)
         self.ui.btHelp.clicked.connect(self.onBtHelpClicked)
+        self.ui.actionNuevo_Juego.triggered.connect(self.onActionnuevo_juegoTriggered)
+        self.ui.actionGuardar.triggered.connect(self.onActionguardarTriggered)
+        self.ui.actionSalir.triggered.connect(self.onActionsalirTriggered)
         self.MessageBox= ctypes.windll.user32.MessageBoxA
         self.MB_ICONERROR = 0x00000010L #Critical Icon
         self.MB_ICONEXCLAMATION= 0x00000030L #Exclamation Icon
@@ -185,7 +189,7 @@ class Sudoku(QMainWindow):
                 self.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
                 
     def leerArchivoSudokuResuelto(self):
-        archivo=open('Soluciones.txt','r')
+        archivo=open("Soluciones.txt","r")
         linea=archivo.readline()
         k=0
         self.resuelto=[]
@@ -236,3 +240,35 @@ class Sudoku(QMainWindow):
     def onBtHelpClicked(self):
         self.numero = 0
         self.Bmetodo = 1
+    
+    def onActionnuevo_juegoTriggered(self):
+        from nuevojuego import Nuevojuego
+        self.n= Nuevojuego()
+        self.n.setVisible(True)
+        self.close()
+    
+    def onActionguardarTriggered(self):
+        archivo=open("Partidas.txt","a")
+        for i in range(9):
+            for j in range(9):
+                archivo.write(str(self.numeros[i][j]))
+        archivo.write(",")
+        archivo.write(self.cronometro)
+        if self.invalida:
+            archivo.write(",1")
+        else:
+            archivo.write(",0")
+        if self.incorrecta:
+            archivo.write(",1")
+        else:
+            archivo.write(",0")
+        if self.ayuda:
+            archivo.write(",1")
+        else:
+            archivo.write(",0")
+        archivo.write("\n")
+        archivo.close()
+        self.MessageBox(None,"Partida Guardada..!","Sudoku",self.MB_ICONEXCLAMATION)
+    
+    def onActionsalirTriggered(self):
+        self.close()
