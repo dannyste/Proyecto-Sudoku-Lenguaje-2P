@@ -36,15 +36,15 @@ class Nuevojuego(QMainWindow):
             self.n.setVisible(True)
             self.close()
         elif medio:
-            self.n= Sudoku(1,invalida,incorrecta,ayuda)
+            self.n= Sudoku(2,invalida,incorrecta,ayuda)
             self.n.setVisible(True)
             self.close()
         elif dificil:
-            self.n= Sudoku(1,invalida,incorrecta,ayuda)
+            self.n= Sudoku(3,invalida,incorrecta,ayuda)
             self.n.setVisible(True)
             self.close()
         elif experto:
-            self.n= Sudoku(1,invalida,incorrecta,ayuda)
+            self.n= Sudoku(4,invalida,incorrecta,ayuda)
             self.n.setVisible(True)
             self.close()
             

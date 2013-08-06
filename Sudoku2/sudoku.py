@@ -3,7 +3,7 @@ Created on 30/07/2013
 
 @author: Edwin
 '''
-from PyQt4.QtGui import QMainWindow,QPushButton
+from PyQt4.QtGui import QMainWindow,QPushButton,QInputDialog,QLineEdit
 from PyQt4.QtCore import QSize,SIGNAL,QTime,QTimer
 from ui_sudoku import Ui_Sudoku
 from validador import Validador
@@ -98,14 +98,20 @@ class Sudoku(QMainWindow):
                 if self.ayudas==5:
                     self.ui.btHelp.setEnabled(False)
             else:
+                indice=self.ui.gLTablero.indexOf(caja)
                 nAct=str(self.numero)
                 nAnt=caja.accessibleName()
                 caja.setAccessibleName(nAct)
                 self.validador.Relacionar()
                 if (self.validador.Validaciones()):
-                    caja.setIcon(self.imgFichas[self.numero])
-                    caja.setIconSize(QSize(48, 48))
-                    caja.setStyleSheet("*{background-color:rgb(158,209,247)}")
+                    if self.jugadaIncorrecta(indice):
+                        self.MessageBox(None,"Su Jugada Es Incorrecta, Intente Con Otra Ficha","Jugada Incorrecta",self.MB_ICONERROR)
+                        caja.setAccessibleName(nAnt)
+                        self.validador.Relacionar()
+                    else:
+                        caja.setIcon(self.imgFichas[self.numero])
+                        caja.setIconSize(QSize(48, 48))
+                        caja.setStyleSheet("*{background-color:rgb(158,209,247)}")
                 else:
                     caja.setAccessibleName(nAnt)
                     self.validador.Relacionar()
@@ -188,6 +194,20 @@ class Sudoku(QMainWindow):
                 self.cajas[i][j].setIconSize(QSize(48, 48))
                 self.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
                 
+    def jugadaIncorrecta(self,indice):
+        if not(self.incorrecta):
+            return 0
+        contador = 0
+        for i in range(9):
+            for j in range(9):
+                if indice==contador:
+                    if self.numero==self.resuelto[i][j]:
+                        return 0
+                    else:
+                        return 1
+                contador = contador + 1
+        return 1
+            
     def leerArchivoSudokuResuelto(self):
         archivo=open("Soluciones.txt","r")
         linea=archivo.readline()
@@ -200,6 +220,88 @@ class Sudoku(QMainWindow):
                 k=k+1
             self.resuelto.append(numeros)
         archivo.close()
+        self.cambiarFilas()
+        self.cambiarColumnas()
+        self.cambiarGrupoFilas()
+        self.cambiarGrupoColumnas()
+
+    def cambiarFilas(self):
+        inicial=0
+        final=2
+        for i in range(3):
+            i1=random.randint(inicial,final)
+            i2=random.randint(inicial,final)
+            while i1==i2:
+                i2=random.randint(inicial,final)
+            for j in range(9):
+                numero=self.resuelto[i1][j]
+                self.resuelto[i1][j]=self.resuelto[i2][j]
+                self.resuelto[i2][j]=numero
+            inicial = inicial + 3
+            final = final + 3
+            
+    def cambiarColumnas(self):
+        inicial=0
+        final=2
+        for j in range(3):
+            j1=random.randint(inicial,final)
+            j2=random.randint(inicial,final)
+            while j1==j2:
+                j2=random.randint(inicial,final)
+            for i in range(9):
+                numero=self.resuelto[i][j1]
+                self.resuelto[i][j1]=self.resuelto[i][j2]
+                self.resuelto[i][j2]=numero
+            inicial = inicial + 3
+            final = final + 3
+            
+    def cambiarGrupoFilas(self):
+        f1=random.randint(0,2)
+        f2=random.randint(0,2)
+        while f1==f2:
+            f2=random.randint(0,2)
+        if ((f1==0 and f2==1) or (f1==1 and f2==0)):
+            for i in range(3):
+                for j in range(9):
+                    numero=self.resuelto[i][j]
+                    self.resuelto[i][j]=self.resuelto[i+3][j]
+                    self.resuelto[i+3][j]=numero
+        elif ((f1==0 and f2==2) or (f1==2 and f2==0)):
+            for i in range(3):
+                for j in range(9):
+                    numero=self.resuelto[i][j]
+                    self.resuelto[i][j]=self.resuelto[i+6][j]
+                    self.resuelto[i+6][j]=numero
+        else:
+            for i in range(3,6):
+                for j in range(9):
+                    numero=self.resuelto[i][j]
+                    self.resuelto[i][j]=self.resuelto[i+3][j]
+                    self.resuelto[i+3][j]=numero
+        
+    def cambiarGrupoColumnas(self):
+        c1=random.randint(0,2)
+        c2=random.randint(0,2)
+        while c1==c2:
+            c2=random.randint(0,2)
+        if ((c1==0 and c2==1) or (c1==1 and c2==0)):
+            for i in range(9):
+                for j in range(3):
+                    numero=self.resuelto[i][j]
+                    self.resuelto[i][j]=self.resuelto[i][j+3]
+                    self.resuelto[i][j+3]=numero
+        elif ((c1==0 and c2==2) or (c1==2 and c2==0)):
+            for i in range(9):
+                for j in range(3):
+                    numero=self.resuelto[i][j]
+                    self.resuelto[i][j]=self.resuelto[i][j+6]
+                    self.resuelto[i][j+6]=numero
+        else:
+            for i in range(9):
+                for j in range(3,6):
+                    numero=self.resuelto[i][j]
+                    self.resuelto[i][j]=self.resuelto[i][j+3]
+                    self.resuelto[i][j+3]=numero
     
     def onPbf1Clicked(self):
         self.numero = 1
@@ -248,27 +350,35 @@ class Sudoku(QMainWindow):
         self.close()
     
     def onActionguardarTriggered(self):
-        archivo=open("Partidas.txt","a")
-        for i in range(9):
-            for j in range(9):
-                archivo.write(str(self.numeros[i][j]))
-        archivo.write(",")
-        archivo.write(self.cronometro)
-        if self.invalida:
-            archivo.write(",1")
-        else:
-            archivo.write(",0")
-        if self.incorrecta:
-            archivo.write(",1")
-        else:
-            archivo.write(",0")
-        if self.ayuda:
-            archivo.write(",1")
-        else:
-            archivo.write(",0")
-        archivo.write("\n")
-        archivo.close()
-        self.MessageBox(None,"Partida Guardada..!","Sudoku",self.MB_ICONEXCLAMATION)
+        (nombre,ok) = QInputDialog.getText(self, self.tr("Sudoku"), self.tr("Nombre:"),QLineEdit.Normal, self.tr(""))
+        if ok==True:
+            while str(nombre)=="" and ok==True:
+                self.MessageBox(None,"Ingrese Un Nombre..!","ERROR",self.MB_ICONERROR)
+                (nombre,ok) = QInputDialog.getText(self, self.tr("Sudoku"), self.tr("Nombre:"),QLineEdit.Normal, self.tr(""))
+            if ok==True:
+                archivo=open("Partidas.txt","a")
+                archivo.write(str(nombre))
+                archivo.write(",")
+                for i in range(9):
+                    for j in range(9):
+                        archivo.write(str(self.numeros[i][j]))
+                archivo.write(",")
+                archivo.write(self.cronometro)
+                if self.invalida:
+                    archivo.write(",1")
+                else:
+                    archivo.write(",0")
+                if self.incorrecta:
+                    archivo.write(",1")
+                else:
+                    archivo.write(",0")
+                if self.ayuda:
+                    archivo.write(",1")
+                else:
+                    archivo.write(",0")
+                archivo.write("\n")
+                archivo.close()
+                self.MessageBox(None,"Partida Guardada..!","Sudoku",self.MB_ICONEXCLAMATION)
     
     def onActionsalirTriggered(self):
         self.close()
