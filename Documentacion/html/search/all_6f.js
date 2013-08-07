@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['onacercadeclicked',['onAcercadeClicked',['../classprincipal_1_1_principal.html#a09645c984cbff6be6ba68c4b95ffbc87',1,'principal::Principal']]],
+  ['onactionguardartriggered',['onActionguardarTriggered',['../classsudoku_1_1_sudoku.html#a04e410b502daf2b7dba261c7c1890fa8',1,'sudoku::Sudoku']]],
+  ['onactionnuevo_5fjuegotriggered',['onActionnuevo_juegoTriggered',['../classsudoku_1_1_sudoku.html#a9d461c3559ed288877a00055da014eba',1,'sudoku::Sudoku']]],
+  ['onactionsalirtriggered',['onActionsalirTriggered',['../classsudoku_1_1_sudoku.html#aa96e09f95d70580e45a0af6e23e4ab64',1,'sudoku::Sudoku']]],
+  ['onbthelpclicked',['onBtHelpClicked',['../classsudoku_1_1_sudoku.html#a18055f16332f25d54471b01ad7a4283b',1,'sudoku::Sudoku']]],
+  ['oncolocarficha',['onColocarFicha',['../classsudoku_1_1_sudoku.html#ab90f4256f9ca764774df6c606dccb8bc',1,'sudoku::Sudoku']]],
+  ['onnuevojuegoclicked',['onNuevojuegoClicked',['../classprincipal_1_1_principal.html#ad2d6ac1894d73e687162a5a3541f79e5',1,'principal::Principal']]],
+  ['onpbcancelarclicked',['onPbcancelarClicked',['../classnuevojuego_1_1_nuevojuego.html#a29dbd3db7a9368c1ec8ea438e1a921d5',1,'nuevojuego::Nuevojuego']]],
+  ['onpbf1clicked',['onPbf1Clicked',['../classsudoku_1_1_sudoku.html#af636ad3dd5ecf0586b5a0cc11bbc0e78',1,'sudoku::Sudoku']]],
+  ['onpbf2clicked',['onPbf2Clicked',['../classsudoku_1_1_sudoku.html#a2da5196b891674fe7d9e4f1c12b8f3d4',1,'sudoku::Sudoku']]],
+  ['onpbf3clicked',['onPbf3Clicked',['../classsudoku_1_1_sudoku.html#a36c26f1d64db573765430a916a4b845a',1,'sudoku::Sudoku']]],
+  ['onpbf4clicked',['onPbf4Clicked',['../classsudoku_1_1_sudoku.html#a6f13726fd8cad20874d2f66c93fb6a7a',1,'sudoku::Sudoku']]],
+  ['onpbf5clicked',['onPbf5Clicked',['../classsudoku_1_1_sudoku.html#a0e6b40f43c2846d6895866461df4904a',1,'sudoku::Sudoku']]],
+  ['onpbf6clicked',['onPbf6Clicked',['../classsudoku_1_1_sudoku.html#abb607fa3fc51befda78e7425b7200ddd',1,'sudoku::Sudoku']]],
+  ['onpbf7clicked',['onPbf7Clicked',['../classsudoku_1_1_sudoku.html#af42f0ecb5c36080dbe2a03d00e92c0aa',1,'sudoku::Sudoku']]],
+  ['onpbf8clicked',['onPbf8Clicked',['../classsudoku_1_1_sudoku.html#a85eed190edf1bbfe3cb4908bb71377ee',1,'sudoku::Sudoku']]],
+  ['onpbf9clicked',['onPbf9Clicked',['../classsudoku_1_1_sudoku.html#a86fc5361d5e951a1b4ee39d9b0203a02',1,'sudoku::Sudoku']]],
+  ['onpbjugarclicked',['onPbjugarClicked',['../classnuevojuego_1_1_nuevojuego.html#a3dd0f97658c3b305f428260a7d80252d',1,'nuevojuego::Nuevojuego']]],
+  ['onpushbuttonclicked',['onPushbuttonClicked',['../classacercade_1_1_acercade.html#ad6fff0aeaf0378a2d6ba9f0673776933',1,'acercade::Acercade']]],
+  ['onsalirclicked',['onSalirClicked',['../classprincipal_1_1_principal.html#a65794ecc2b3264cfb80570925950cfdb',1,'principal::Principal']]],
+  ['opcionayuda',['opcionAyuda',['../classsudoku_1_1_sudoku.html#ab5193226c263210588b833b0a24e5cdf',1,'sudoku::Sudoku']]]
+];

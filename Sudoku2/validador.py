@@ -6,15 +6,21 @@ Created on 02/08/2013
 from graficador import Graficador
 import ctypes
 
+## \brief Clase que maneja las validaciones del numero dentro del tablero.
 class Validador:
 
     def __init__(self,Sudoku):
+        """Contructor
+            Se Inicializa la variable del tablero para tener acceso a éste y creamos un objeto de tipo graficador para poder pintar el tablero.
+            Parametro:
+            s El objeto padre de tipo Sudoku que crea a éste objeto."""
         self.sudoku=Sudoku
         self.graficador=Graficador(self.sudoku)
         self.MessageBox= ctypes.windll.user32.MessageBoxA
         self.MB_ICONERROR = 0x00000010L #Critical Icon
         
     def Relacionar(self):
+        """Pasa de la imagen de la ficha a un entero que corresponde al numero de la imagen."""
         self.sudoku.numeros=[]
         for i in range(9):
             n=[]
@@ -23,6 +29,8 @@ class Validador:
             self.sudoku.numeros.append(n)
             
     def ValidarEspaciosVacios(self):
+        """Verifica si el en tablero hay algun espacio vacio
+            Retorna: 1 -> Completo , 0 -> Incompleto."""
         for i in range(9):
             for j in range(9):
                 if self.sudoku.numeros[i][j]==0:
@@ -30,6 +38,8 @@ class Validador:
         return 1
     
     def SubCuadros(self):
+        """Extrae la subcuadrícula en la que se va a buscar algún posible numero repetido.
+            Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos"""
         contador = 0
         self.sudoku.subnumeros=[]
         for i in range(3):
@@ -102,6 +112,9 @@ class Validador:
         return 0
                    
     def VerificarSubCuadro(self):
+        """Valida que no existan numeros repetidos en la subcuadrícula.
+            En caso de haber algún numero repetido en la subcuadrícula, se pinta dicha subcuadrícula.
+            Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos"""
         for i in range(3):
             for j in range(3):
                 numero = self.sudoku.subnumeros[i][j]
@@ -114,6 +127,8 @@ class Validador:
         return 1
     
     def ValidarX(self):
+        """Recorre el tablero línea a línea para encontrar numeros repetidos
+        Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         b = 1
         for i in range(9):
             b = self.ValidaLinea(i)
@@ -123,6 +138,9 @@ class Validador:
         return 1
             
     def ValidaLinea(self,i):
+        """Busca en la linea i si existe algún numero repetido.
+            Parametro: i Línea donde se buscará.
+            Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         fichas=[0]*10
         for j in range(9):
             indice = self.sudoku.numeros[i][j]
@@ -130,6 +148,8 @@ class Validador:
         return self.VerificaArregloIndices(fichas)
     
     def ValidarY(self):
+        """Recorre el tablero columna a columna para encontrar numeros repetidos
+            Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         b = 1
         for j in range(9):
             b = self.ValidaColumna(j)
@@ -139,6 +159,9 @@ class Validador:
         return 1
             
     def ValidaColumna(self,j):
+        """Busca en la columna j si existe algún numero repetido.
+            Parametro: j Columna donde se buscará.
+            Retorna: Valor: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         fichas=[0]*10
         for i in range(9):
             indice = self.sudoku.numeros[i][j]
@@ -146,12 +169,18 @@ class Validador:
         return self.VerificaArregloIndices(fichas)
     
     def VerificaArregloIndices(self,fichas):
+        """Verifica el numero de veces que se repite un numero.
+            Si algún numero se repite mas de una vez, entonces existe algún repetido.
+            Parametro: fichas Numero de ocurrencias de cada numero.
+            Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         for i in range(1,10):
             if fichas[i] > 1:
                 return 0
         return 1
     
     def Validaciones(self):
+        """Maneja todas las validaciones y muestra un mensaje al usuario de acuerdo al tipo de error.
+            Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         b=1
         if not(self.sudoku.invalida):
             return 1

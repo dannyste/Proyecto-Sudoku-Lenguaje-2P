@@ -5,12 +5,19 @@ Created on 01/08/2013
 '''
 from PyQt4.QtGui import QIcon,QPixmap
 
+## \brief clase que se encarga de manejar el color en las fichas en caso de error.
+## \details Es utilizada por la clase Sudoku para colorear las fichas cuando existe error en X, en Y, o en la Subcuadricula.
 class Graficador:
 
     def __init__(self,Sudoku):
+        """Constructor
+           parametro:
+            s - Nos da la referencia al objeto Sudoku que la crea, para poder acceder a sus variables"""
         self.sudoku=Sudoku
         
     def initArregloImgFichas(self):
+        """Inicializa un arreglo de Iconos del 1 - 9
+            Se asigna a cada elemento del arreglo la imagen de la ficha correspondiente al indice del arreglo."""
         self.sudoku.imgFichas=[]
         vacia = QIcon()
         vacia.addPixmap(QPixmap(":/img/vacia2.png"),QIcon.Normal,QIcon.Off)
@@ -44,19 +51,30 @@ class Graficador:
         self.sudoku.imgFichas.append(nueve)
         
     def pintaX(self,i):
+        """Pinta una fila determinada del tablero cuando hay un error
+           parametro:
+           i La fila en la que se quiere colocar una ficha invalida o incorrecta"""
         for j in range(9):
             self.sudoku.cajas[i][j].setStyleSheet("*{background-color: rgb(255, 255, 127)}");
             
     def pintaY(self,j):
+        """Pinta una columna determinada del tablero cuando hay un error
+           parametro:
+               j La columna en la que se quiere colocar una ficha invalida o incorrecta"""
         for i in range(9):
             self.sudoku.cajas[i][j].setStyleSheet("*{background-color: rgb(255, 255, 127)}");
     
     def pintaSub(self,x,y):
+        """Pinta una subcuadricula determinada del tablero cuando hay un error
+            Parametro:
+                x La fila desde donde empieza la subccuadricula en la que se quiere colocar una ficha invalida o incorrecta.
+                y La columna desde donde empieza la subccuadricula en la que se quiere colocar una ficha invalida o incorrecta"""
         for i in range(x,x+3):
             for j in range(y,y+3):
                 self.sudoku.cajas[i][j].setStyleSheet("*{background-color: rgb(255, 255, 127)}");
                 
     def pintaTablero(self):
+        """Pinta completamente tablero"""
         for i in range(9):
             for j in range(9):
                 self.sudoku.cajas[i][j].setStyleSheet("*{background-color:rgb(158,209,247)}")
