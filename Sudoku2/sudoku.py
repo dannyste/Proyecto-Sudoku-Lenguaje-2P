@@ -343,7 +343,6 @@ class Sudoku(QMainWindow):
                     self.resuelto[i][j+3]=numero
     
     def cargarPartida(self):
-        print self.partida
         juego=self.partida[1]
         k=0
         for i in range(9):
@@ -352,7 +351,24 @@ class Sudoku(QMainWindow):
                 k = k + 1
         self.validador.Relacionar()
         self.convertirInttoImg()
-    
+        archivo=open("Resueltos.txt","r")
+        linea=archivo.readline()
+        while linea!="":
+            resueltos=linea.split(",")
+            if resueltos[0]==self.partida[0]:
+                break
+            linea=archivo.readline()
+        solucion=resueltos[1]
+        self.resuelto=[]
+        k=0
+        for i in range(9):
+            numeros=[]
+            for j in range(9):
+                numeros.append(int(solucion[k]))
+                k=k+1
+            self.resuelto.append(numeros)
+        archivo.close()
+        
     def onPbf1Clicked(self):
         """Setea el numero 1 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 1
@@ -419,6 +435,14 @@ class Sudoku(QMainWindow):
                 self.MessageBox(None,"Ingrese Un Nombre..!","ERROR",self.MB_ICONERROR)
                 (nombre,ok) = QInputDialog.getText(self, self.tr("Sudoku"), self.tr("Nombre:"),QLineEdit.Normal, self.tr(""))
             if ok==True:
+                solucion=open("Resueltos.txt","a")
+                solucion.write(str(nombre))
+                solucion.write(",")
+                for i in range(9):
+                    for j in range(9):
+                        solucion.write(str(self.resuelto[i][j]))
+                solucion.write("\n")
+                solucion.close()
                 archivo=open("Partidas.txt","a")
                 archivo.write(str(nombre))
                 archivo.write(",")
