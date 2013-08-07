@@ -11,9 +11,9 @@ class Validador:
 
     def __init__(self,Sudoku):
         """Contructor
-            Se Inicializa la variable del tablero para tener acceso a éste y creamos un objeto de tipo graficador para poder pintar el tablero.
+            Se Inicializa la variable del tablero para tener acceso a este y creamos un objeto de tipo graficador para poder pintar el tablero.
             Parametro:
-            s El objeto padre de tipo Sudoku que crea a éste objeto."""
+            s El objeto padre de tipo Sudoku que crea a este objeto."""
         self.sudoku=Sudoku
         self.graficador=Graficador(self.sudoku)
         self.MessageBox= ctypes.windll.user32.MessageBoxA
@@ -38,7 +38,7 @@ class Validador:
         return 1
     
     def SubCuadros(self):
-        """Extrae la subcuadrícula en la que se va a buscar algún posible numero repetido.
+        """Extrae la subcuadricula en la que se va a buscar algun posible numero repetido.
             Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos"""
         contador = 0
         self.sudoku.subnumeros=[]
@@ -112,8 +112,8 @@ class Validador:
         return 0
                    
     def VerificarSubCuadro(self):
-        """Valida que no existan numeros repetidos en la subcuadrícula.
-            En caso de haber algún numero repetido en la subcuadrícula, se pinta dicha subcuadrícula.
+        """Valida que no existan numeros repetidos en la subcuadricula.
+            En caso de haber algun numero repetido en la subcuadricula, se pinta dicha subcuadricula.
             Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos"""
         for i in range(3):
             for j in range(3):
@@ -127,7 +127,7 @@ class Validador:
         return 1
     
     def ValidarX(self):
-        """Recorre el tablero línea a línea para encontrar numeros repetidos
+        """Recorre el tablero linea a linea para encontrar numeros repetidos
         Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         b = 1
         for i in range(9):
@@ -138,8 +138,8 @@ class Validador:
         return 1
             
     def ValidaLinea(self,i):
-        """Busca en la linea i si existe algún numero repetido.
-            Parametro: i Línea donde se buscará.
+        """Busca en la linea i si existe algun numero repetido.
+            Parametro: i Linea donde se buscara.
             Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         fichas=[0]*10
         for j in range(9):
@@ -159,8 +159,8 @@ class Validador:
         return 1
             
     def ValidaColumna(self,j):
-        """Busca en la columna j si existe algún numero repetido.
-            Parametro: j Columna donde se buscará.
+        """Busca en la columna j si existe algun numero repetido.
+            Parametro: j Columna donde se buscara.
             Retorna: Valor: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         fichas=[0]*10
         for i in range(9):
@@ -170,7 +170,7 @@ class Validador:
     
     def VerificaArregloIndices(self,fichas):
         """Verifica el numero de veces que se repite un numero.
-            Si algún numero se repite mas de una vez, entonces existe algún repetido.
+            Si algun numero se repite mas de una vez, entonces existe algun repetido.
             Parametro: fichas Numero de ocurrencias de cada numero.
             Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos."""
         for i in range(1,10):

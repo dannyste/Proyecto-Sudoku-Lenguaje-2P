@@ -17,11 +17,9 @@ class Acercade(QMainWindow):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.onPushbuttonClicked)
         
-    def Regresar(self,p):   
-        """maneja evento click boton Atras"""     
-        self.r = p
-        
     def onPushbuttonClicked(self):   
         """maneja evento click boton ok """       
+        from principal import Principal
+        self.p= Principal()
+        self.p.setVisible(True)
         self.close()
-        self.r.show()

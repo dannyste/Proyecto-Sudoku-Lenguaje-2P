@@ -14,14 +14,14 @@ import random
 ## \details Aqui se genera el tablero de acuerdo con las especificaciones dadas desde la ventana de nuevo juego como las opciones de alerta, la dificultad y la ayuda.
 class Sudoku(QMainWindow):
 
-    def __init__(self,dificultad,invalida,incorrecta,ayuda):
+    def __init__(self,dificultad,invalida,incorrecta,ayuda,partida):
         """Contructor
             *Crea una instancia de Sudoku de acuerdo a las especificaciones dadas por las variables de entrada.
-            *Se crea e inicia el cronómetro.
+            *Se crea e inicia el cronometro.
             Parametro:
             - dificultad Dificultad del juego.
             - incorrecta Determina si se realizan o no las validaciones de jugadas incorrectas.
-            - invalida Determina si se realizan o no las validaciones de jugadas inválidas.
+            - invalida Determina si se realizan o no las validaciones de jugadas invalidas.
             - ayuda Determina si se activa o no el boton ayuda."""
         QMainWindow.__init__(self)
         self.ui= Ui_Sudoku()
@@ -30,6 +30,7 @@ class Sudoku(QMainWindow):
         self.invalida=invalida
         self.incorrecta=incorrecta
         self.ayuda=ayuda
+        self.partida=partida
         if self.ayuda==False:
             self.ui.btHelp.setEnabled(False)
         else:
@@ -76,7 +77,7 @@ class Sudoku(QMainWindow):
         self.ui.contTiempo.display(self.cronometro)
         
     def initGui(self):
-        """Inicializa la interfaz gráfica del tablero
+        """Inicializa la interfaz grafica del tablero
             Se inicializa el tablero y luego se lo llena con el numero de fichas de acuerdo a la dificultad."""
         self.Bmetodo=0
         self.cajas=[]
@@ -97,11 +98,13 @@ class Sudoku(QMainWindow):
         if self.dificultad!=5:
             self.leerArchivoSudokuResuelto()
             self.llenaTableroDificultad()
+        else:
+            self.cargarPartida()
         
     def onColocarFicha(self):
         """Slot que se ejecuta cada vez que se presione en algun boton dentro del tablero
-         Determina que acción se realiza al pulsar la ficha en el tablero.
-         Controla que tipo de validación se realiza."""
+         Determina que accion se realiza al pulsar la ficha en el tablero.
+         Controla que tipo de validacion se realiza."""
         caja=QPushButton()
         caja=self.sender()
         if self.Bmetodo==0:
@@ -148,7 +151,7 @@ class Sudoku(QMainWindow):
             self.posFichas[i].setFlat(True)
             
     def muestraPosiblesFichas(self,caja):
-        """Muestra las fichas que son validas para esa posición.
+        """Muestra las fichas que son validas para esa posicion.
             Parametro: button Boton en la posicion donde se desea colocar la ficha."""
         contador=0
         for i in range(1,10):
@@ -173,8 +176,8 @@ class Sudoku(QMainWindow):
                 k=k+1
                 
     def opcionAyuda(self,caja):
-        """Maneja la opción cuando el jugador activa la ayuda
-            Parametro: b El botón que corresponde al lugar del tablero donde el jugador desea se coloque el numero correcto."""
+        """Maneja la opcion cuando el jugador activa la ayuda
+            Parametro: b El boton que corresponde al lugar del tablero donde el jugador desea se coloque el numero correcto."""
         indice=self.ui.gLTablero.indexOf(caja)
         contador=0
         for i in range(9):
@@ -189,7 +192,7 @@ class Sudoku(QMainWindow):
                 contador = contador +1
                 
     def llenaTableroDificultad(self):
-        """Llena el tablero que se mostrara al jugador de acuerdo a la dificultad que se eligió
+        """Llena el tablero que se mostrara al jugador de acuerdo a la dificultad que se eligio
             Se asigna el numero de fichas de acuerdo con la dificultad en posiciones aleatorias."""
         self.setDificultad()
         for i in range(self.nroFichas):
@@ -223,7 +226,7 @@ class Sudoku(QMainWindow):
                 
     def jugadaIncorrecta(self,indice):
         """Determina si la jugada es Incorrecta
-            *Compara el numero que el jugador desea colocar con el numero que está en esa misma posición del tablero solucionado.
+            *Compara el numero que el jugador desea colocar con el numero que esta en esa misma posicion del tablero solucionado.
             Parametro: ind El indice del boton correspondiente al lugar donde el jugador desea colocar la ficha.
             Retorna: 1 -> Incorrecto , 0 -> Correcto."""
         if not(self.incorrecta):
@@ -339,53 +342,64 @@ class Sudoku(QMainWindow):
                     self.resuelto[i][j]=self.resuelto[i][j+3]
                     self.resuelto[i][j+3]=numero
     
+    def cargarPartida(self):
+        print self.partida
+        juego=self.partida[1]
+        k=0
+        for i in range(9):
+            for j in range(9):
+                self.cajas[i][j].setAccessibleName(juego[k])
+                k = k + 1
+        self.validador.Relacionar()
+        self.convertirInttoImg()
+    
     def onPbf1Clicked(self):
-        """Setea el numero 1 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 1 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 1
         self.Bmetodo = 1
         
     def onPbf2Clicked(self):
-        """Setea el numero 2 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 2 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 2
         self.Bmetodo = 1
         
     def onPbf3Clicked(self):
-        """Setea el numero 3 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 3 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 3
         self.Bmetodo = 1
         
     def onPbf4Clicked(self):
-        """Setea el numero 4 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 4 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 4
         self.Bmetodo = 1
         
     def onPbf5Clicked(self):
-        """Setea el numero 5 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 5 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 5
         self.Bmetodo = 1
         
     def onPbf6Clicked(self):
-        """Setea el numero 6 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 6 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 6
         self.Bmetodo = 1
         
     def onPbf7Clicked(self):
-        """Setea el numero 7 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 7 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 7
         self.Bmetodo = 1
         
     def onPbf8Clicked(self):
-        """Setea el numero 8 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 8 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 8
         self.Bmetodo = 1
         
     def onPbf9Clicked(self):
-        """Setea el numero 9 siendo ésta ficha la que el jugador quiere colocar en alguna parte del tablero."""
+        """Setea el numero 9 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero."""
         self.numero = 9
         self.Bmetodo = 1
         
     def onBtHelpClicked(self):
-        """Setea el numero 0 que indicará que se va a colocar el número correcto automaticamente."""
+        """Setea el numero 0 que indicara que se va a colocar el numero correcto automaticamente."""
         self.numero = 0
         self.Bmetodo = 1
     
@@ -398,7 +412,7 @@ class Sudoku(QMainWindow):
     
     def onActionguardarTriggered(self):
         """Guarda la partida actual
-            Se pide el nombre con el que se desea guardar la partida y luego se procede a grabarla con encriptación."""
+            Se pide el nombre con el que se desea guardar la partida y luego se procede a grabarla con encriptacion."""
         (nombre,ok) = QInputDialog.getText(self, self.tr("Sudoku"), self.tr("Nombre:"),QLineEdit.Normal, self.tr(""))
         if ok==True:
             while str(nombre)=="" and ok==True:
