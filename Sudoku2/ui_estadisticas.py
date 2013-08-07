@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'estadisticas.ui'
 #
-# Created: Tue Aug 06 15:15:33 2013
+# Created: Tue Aug 06 15:45:20 2013
 #      by: PyQt4 UI code generator 4.10.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -40,6 +40,15 @@ class Ui_estadisticas(object):
         self.label.setStyleSheet(_fromUtf8("#label{background-image:  url(:/img/TituloIco.png);}"))
         self.label.setText(_fromUtf8(""))
         self.label.setObjectName(_fromUtf8("label"))
+        self.pBCancelar = QtGui.QPushButton(self.centralwidget)
+        self.pBCancelar.setGeometry(QtCore.QRect(20, 360, 81, 61))
+        self.pBCancelar.setText(_fromUtf8(""))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/img/back.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pBCancelar.setIcon(icon)
+        self.pBCancelar.setIconSize(QtCore.QSize(64, 64))
+        self.pBCancelar.setFlat(True)
+        self.pBCancelar.setObjectName(_fromUtf8("pBCancelar"))
         estadisticas.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(estadisticas)
@@ -48,6 +57,7 @@ class Ui_estadisticas(object):
     def retranslateUi(self, estadisticas):
         estadisticas.setWindowTitle(_translate("estadisticas", "MainWindow", None))
 
+import img_rc
 
 if __name__ == "__main__":
     import sys

@@ -8,6 +8,7 @@ from ui_principal import Ui_principal
 from nuevojuego import Nuevojuego
 from acercade import Acercade
 from sudoku import Sudoku
+from estadisticas import estadisticas
 import ctypes
 
 ##  \brief     Clase que corresponde a la ventana Inicial
@@ -29,6 +30,7 @@ class Principal(QMainWindow):
         self.ui.AcercaDe.clicked.connect(self.onAcercadeClicked)
         self.ui.salir.clicked.connect(self.onSalirClicked)
         self.ui.CargaJuego.clicked.connect(self.onCargajuegoClicked)
+        self.ui.Estadisticas.clicked.connect(self.onEstadisticaClicked)
         self.MessageBox= ctypes.windll.user32.MessageBoxA
         self.MB_ICONERROR = 0x00000010L #Critical Icon
     
@@ -42,6 +44,12 @@ class Principal(QMainWindow):
     def onAcercadeClicked(self):  
         """Muestra informacion del grupo desarrollador"""      
         self.a = Acercade()
+        self.a.setVisible(True)        
+        self.close()
+    
+    def onEstadisticaClicked(self):  
+        """Muestra informacion del grupo desarrollador"""      
+        self.a = estadisticas()
         self.a.setVisible(True)        
         self.close()
         
