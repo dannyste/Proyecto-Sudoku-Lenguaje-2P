@@ -1,0 +1,109 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Indice de namespaces}{1}
+\contentsline {section}{\numberline {1.1}Lista de 'namespaces'}{1}
+\contentsline {chapter}{\numberline {2}Indice jer\IeC {\'a}rquico}{3}
+\contentsline {section}{\numberline {2.1}Jerarqu\IeC {\'\i }a de la clase}{3}
+\contentsline {chapter}{\numberline {3}\IeC {\'I}ndice de clases}{5}
+\contentsline {section}{\numberline {3.1}Lista de clases}{5}
+\contentsline {chapter}{\numberline {4}Documentaci\IeC {\'o}n de namespaces}{7}
+\contentsline {section}{\numberline {4.1}Referencia del Namespace acercade}{7}
+\contentsline {subsection}{\numberline {4.1.1}Descripci\IeC {\'o}n detallada}{7}
+\contentsline {section}{\numberline {4.2}Referencia del Namespace graficador}{7}
+\contentsline {subsection}{\numberline {4.2.1}Descripci\IeC {\'o}n detallada}{7}
+\contentsline {section}{\numberline {4.3}Referencia del Namespace nuevojuego}{7}
+\contentsline {subsection}{\numberline {4.3.1}Descripci\IeC {\'o}n detallada}{8}
+\contentsline {section}{\numberline {4.4}Referencia del Namespace principal}{8}
+\contentsline {subsection}{\numberline {4.4.1}Descripci\IeC {\'o}n detallada}{8}
+\contentsline {section}{\numberline {4.5}Referencia del Namespace sudoku}{8}
+\contentsline {subsection}{\numberline {4.5.1}Descripci\IeC {\'o}n detallada}{8}
+\contentsline {section}{\numberline {4.6}Referencia del Namespace validador}{8}
+\contentsline {subsection}{\numberline {4.6.1}Descripci\IeC {\'o}n detallada}{8}
+\contentsline {chapter}{\numberline {5}Documentaci\IeC {\'o}n de las clases}{9}
+\contentsline {section}{\numberline {5.1}Referencia de la Clase acercade.\discretionary {-}{}{}Acercade}{9}
+\contentsline {subsection}{\numberline {5.1.1}Descripci\IeC {\'o}n detallada}{10}
+\contentsline {subsection}{\numberline {5.1.2}Documentaci\IeC {\'o}n del constructor y destructor}{10}
+\contentsline {subsubsection}{\numberline {5.1.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{10}
+\contentsline {subsection}{\numberline {5.1.3}Documentaci\IeC {\'o}n de las funciones miembro}{10}
+\contentsline {subsubsection}{\numberline {5.1.3.1}on\discretionary {-}{}{}Pushbutton\discretionary {-}{}{}Clicked}{10}
+\contentsline {section}{\numberline {5.2}Referencia de la Clase graficador.\discretionary {-}{}{}Graficador}{10}
+\contentsline {subsection}{\numberline {5.2.1}Descripci\IeC {\'o}n detallada}{10}
+\contentsline {subsection}{\numberline {5.2.2}Documentaci\IeC {\'o}n del constructor y destructor}{11}
+\contentsline {subsubsection}{\numberline {5.2.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{11}
+\contentsline {subsection}{\numberline {5.2.3}Documentaci\IeC {\'o}n de las funciones miembro}{11}
+\contentsline {subsubsection}{\numberline {5.2.3.1}init\discretionary {-}{}{}Arreglo\discretionary {-}{}{}Img\discretionary {-}{}{}Fichas}{11}
+\contentsline {subsubsection}{\numberline {5.2.3.2}pinta\discretionary {-}{}{}Sub}{11}
+\contentsline {subsubsection}{\numberline {5.2.3.3}pinta\discretionary {-}{}{}Tablero}{11}
+\contentsline {subsubsection}{\numberline {5.2.3.4}pinta\discretionary {-}{}{}X}{11}
+\contentsline {subsubsection}{\numberline {5.2.3.5}pinta\discretionary {-}{}{}Y}{11}
+\contentsline {section}{\numberline {5.3}Referencia de la Clase nuevojuego.\discretionary {-}{}{}Nuevojuego}{11}
+\contentsline {subsection}{\numberline {5.3.1}Descripci\IeC {\'o}n detallada}{12}
+\contentsline {subsection}{\numberline {5.3.2}Documentaci\IeC {\'o}n del constructor y destructor}{13}
+\contentsline {subsubsection}{\numberline {5.3.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{13}
+\contentsline {subsection}{\numberline {5.3.3}Documentaci\IeC {\'o}n de las funciones miembro}{13}
+\contentsline {subsubsection}{\numberline {5.3.3.1}on\discretionary {-}{}{}Pbcancelar\discretionary {-}{}{}Clicked}{13}
+\contentsline {subsubsection}{\numberline {5.3.3.2}on\discretionary {-}{}{}Pbjugar\discretionary {-}{}{}Clicked}{13}
+\contentsline {section}{\numberline {5.4}Referencia de la Clase principal.\discretionary {-}{}{}Principal}{13}
+\contentsline {subsection}{\numberline {5.4.1}Descripci\IeC {\'o}n detallada}{14}
+\contentsline {subsection}{\numberline {5.4.2}Documentaci\IeC {\'o}n del constructor y destructor}{14}
+\contentsline {subsubsection}{\numberline {5.4.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{14}
+\contentsline {subsection}{\numberline {5.4.3}Documentaci\IeC {\'o}n de las funciones miembro}{15}
+\contentsline {subsubsection}{\numberline {5.4.3.1}on\discretionary {-}{}{}Acercade\discretionary {-}{}{}Clicked}{15}
+\contentsline {subsubsection}{\numberline {5.4.3.2}on\discretionary {-}{}{}Cargajuego\discretionary {-}{}{}Clicked}{15}
+\contentsline {subsubsection}{\numberline {5.4.3.3}on\discretionary {-}{}{}Nuevojuego\discretionary {-}{}{}Clicked}{15}
+\contentsline {subsubsection}{\numberline {5.4.3.4}on\discretionary {-}{}{}Salir\discretionary {-}{}{}Clicked}{15}
+\contentsline {section}{\numberline {5.5}Referencia de la Clase sudoku.\discretionary {-}{}{}Sudoku}{15}
+\contentsline {subsection}{\numberline {5.5.1}Descripci\IeC {\'o}n detallada}{17}
+\contentsline {subsection}{\numberline {5.5.2}Documentaci\IeC {\'o}n del constructor y destructor}{17}
+\contentsline {subsubsection}{\numberline {5.5.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{17}
+\contentsline {subsection}{\numberline {5.5.3}Documentaci\IeC {\'o}n de las funciones miembro}{17}
+\contentsline {subsubsection}{\numberline {5.5.3.1}convertir\discretionary {-}{}{}Intto\discretionary {-}{}{}Img}{17}
+\contentsline {subsubsection}{\numberline {5.5.3.2}init\discretionary {-}{}{}Arreglo\discretionary {-}{}{}Pistas}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.3}init\discretionary {-}{}{}Cronometro}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.4}init\discretionary {-}{}{}Gui}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.5}intercambiar\discretionary {-}{}{}Columnas}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.6}intercambiar\discretionary {-}{}{}Filas}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.7}intercambiar\discretionary {-}{}{}Grupo\discretionary {-}{}{}Columnas}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.8}intercambiar\discretionary {-}{}{}Grupo\discretionary {-}{}{}Filas}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.9}jugada\discretionary {-}{}{}Incorrecta}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.10}leer\discretionary {-}{}{}Archivo\discretionary {-}{}{}Sudoku\discretionary {-}{}{}Resuelto}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.11}llena\discretionary {-}{}{}Tablero\discretionary {-}{}{}Dificultad}{18}
+\contentsline {subsubsection}{\numberline {5.5.3.12}mostrar\discretionary {-}{}{}Pistas}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.13}mostrar\discretionary {-}{}{}Tiempo}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.14}muestra\discretionary {-}{}{}Posibles\discretionary {-}{}{}Fichas}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.15}on\discretionary {-}{}{}Actionguardar\discretionary {-}{}{}Triggered}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.16}on\discretionary {-}{}{}Actionnuevo\discretionary {-}{}{}\_\discretionary {-}{}{}juego\discretionary {-}{}{}Triggered}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.17}on\discretionary {-}{}{}Actionsalir\discretionary {-}{}{}Triggered}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.18}on\discretionary {-}{}{}Bt\discretionary {-}{}{}Help\discretionary {-}{}{}Clicked}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.19}on\discretionary {-}{}{}Colocar\discretionary {-}{}{}Ficha}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.20}on\discretionary {-}{}{}Pbf1\discretionary {-}{}{}Clicked}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.21}on\discretionary {-}{}{}Pbf2\discretionary {-}{}{}Clicked}{19}
+\contentsline {subsubsection}{\numberline {5.5.3.22}on\discretionary {-}{}{}Pbf3\discretionary {-}{}{}Clicked}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.23}on\discretionary {-}{}{}Pbf4\discretionary {-}{}{}Clicked}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.24}on\discretionary {-}{}{}Pbf5\discretionary {-}{}{}Clicked}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.25}on\discretionary {-}{}{}Pbf6\discretionary {-}{}{}Clicked}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.26}on\discretionary {-}{}{}Pbf7\discretionary {-}{}{}Clicked}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.27}on\discretionary {-}{}{}Pbf8\discretionary {-}{}{}Clicked}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.28}on\discretionary {-}{}{}Pbf9\discretionary {-}{}{}Clicked}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.29}opcion\discretionary {-}{}{}Ayuda}{20}
+\contentsline {subsubsection}{\numberline {5.5.3.30}set\discretionary {-}{}{}Dificultad}{20}
+\contentsline {section}{\numberline {5.6}Referencia de la Clase ui\discretionary {-}{}{}\_\discretionary {-}{}{}acercade.\discretionary {-}{}{}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}acerca\discretionary {-}{}{}De}{21}
+\contentsline {section}{\numberline {5.7}Referencia de la Clase ui\discretionary {-}{}{}\_\discretionary {-}{}{}estadisticas.\discretionary {-}{}{}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}estadisticas}{22}
+\contentsline {section}{\numberline {5.8}Referencia de la Clase ui\discretionary {-}{}{}\_\discretionary {-}{}{}nuevojuego.\discretionary {-}{}{}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Nuevo\discretionary {-}{}{}Juego}{23}
+\contentsline {section}{\numberline {5.9}Referencia de la Clase ui\discretionary {-}{}{}\_\discretionary {-}{}{}principal.\discretionary {-}{}{}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}principal}{24}
+\contentsline {section}{\numberline {5.10}Referencia de la Clase ui\discretionary {-}{}{}\_\discretionary {-}{}{}sudoku.\discretionary {-}{}{}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Sudoku}{25}
+\contentsline {section}{\numberline {5.11}Referencia de la Clase validador.\discretionary {-}{}{}Validador}{26}
+\contentsline {subsection}{\numberline {5.11.1}Descripci\IeC {\'o}n detallada}{27}
+\contentsline {subsection}{\numberline {5.11.2}Documentaci\IeC {\'o}n del constructor y destructor}{27}
+\contentsline {subsubsection}{\numberline {5.11.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{27}
+\contentsline {subsection}{\numberline {5.11.3}Documentaci\IeC {\'o}n de las funciones miembro}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.1}Relacionar}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.2}Sub\discretionary {-}{}{}Cuadros}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.3}Validaciones}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.4}Valida\discretionary {-}{}{}Columna}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.5}Valida\discretionary {-}{}{}Linea}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.6}Validar\discretionary {-}{}{}Espacios\discretionary {-}{}{}Vacios}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.7}Validar\discretionary {-}{}{}X}{27}
+\contentsline {subsubsection}{\numberline {5.11.3.8}Validar\discretionary {-}{}{}Y}{28}
+\contentsline {subsubsection}{\numberline {5.11.3.9}Verifica\discretionary {-}{}{}Arreglo\discretionary {-}{}{}Indices}{28}
+\contentsline {subsubsection}{\numberline {5.11.3.10}Verificar\discretionary {-}{}{}Sub\discretionary {-}{}{}Cuadro}{28}
+\contentsline {part}{\IeC {\'I}ndice}{29}

@@ -2,12 +2,7 @@ var NAVTREE =
 [
   [ "SUDOKU PyQt", "index.html", [
     [ "Namespaces", null, [
-      [ "Lista de 'namespaces'", "namespaces.html", "namespaces" ],
-      [ "Miembros del Namespace ", "namespacemembers.html", [
-        [ "Todo", "namespacemembers.html", null ],
-        [ "Funciones", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
-      ] ]
+      [ "Lista de 'namespaces'", "namespaces.html", "namespaces" ]
     ] ],
     [ "Clases", null, [
       [ "Lista de clases", "annotated.html", "annotated" ],
@@ -15,20 +10,15 @@ var NAVTREE =
       [ "Jerarquía de la clase", "hierarchy.html", "hierarchy" ],
       [ "Miembros de las clases", "functions.html", [
         [ "Todo", "functions.html", null ],
-        [ "Funciones", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Funciones", "functions_func.html", null ]
       ] ]
-    ] ],
-    [ "Archivos", null, [
-      [ "Lista de archivos", "files.html", "files" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"acercade_8py.html",
-"ui__sudoku_8py.html#ac5006bb4bdbf002de1fbcdcb5b805963"
+".html"
 ];
 
 var SYNCONMSG = 'click en deshabilitar sincronización';

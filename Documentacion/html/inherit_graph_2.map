@@ -1,6 +1,7 @@
 <map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
 <area shape="rect" id="node2" href="$classui__acercade_1_1_ui__acerca_de.html" title="ui_acercade.Ui_acercaDe" alt="" coords="124,5,295,32"/>
-<area shape="rect" id="node3" href="$classui__nuevojuego_1_1_ui___nuevo_juego.html" title="ui_nuevojuego.Ui_NuevoJuego" alt="" coords="112,56,307,83"/>
-<area shape="rect" id="node4" href="$classui__principal_1_1_ui__principal.html" title="ui_principal.Ui_principal" alt="" coords="130,107,289,133"/>
-<area shape="rect" id="node5" href="$classui__sudoku_1_1_ui___sudoku.html" title="ui_sudoku.Ui_Sudoku" alt="" coords="135,157,283,184"/>
+<area shape="rect" id="node3" href="$classui__estadisticas_1_1_ui__estadisticas.html" title="ui_estadisticas.Ui\l_estadisticas" alt="" coords="147,57,272,98"/>
+<area shape="rect" id="node4" href="$classui__nuevojuego_1_1_ui___nuevo_juego.html" title="ui_nuevojuego.Ui_NuevoJuego" alt="" coords="112,123,307,149"/>
+<area shape="rect" id="node5" href="$classui__principal_1_1_ui__principal.html" title="ui_principal.Ui_principal" alt="" coords="130,173,289,200"/>
+<area shape="rect" id="node6" href="$classui__sudoku_1_1_ui___sudoku.html" title="ui_sudoku.Ui_Sudoku" alt="" coords="135,224,283,251"/>
 </map>

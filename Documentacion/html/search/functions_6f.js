@@ -5,6 +5,7 @@ var searchData=
   ['onactionnuevo_5fjuegotriggered',['onActionnuevo_juegoTriggered',['../classsudoku_1_1_sudoku.html#a9d461c3559ed288877a00055da014eba',1,'sudoku::Sudoku']]],
   ['onactionsalirtriggered',['onActionsalirTriggered',['../classsudoku_1_1_sudoku.html#aa96e09f95d70580e45a0af6e23e4ab64',1,'sudoku::Sudoku']]],
   ['onbthelpclicked',['onBtHelpClicked',['../classsudoku_1_1_sudoku.html#a18055f16332f25d54471b01ad7a4283b',1,'sudoku::Sudoku']]],
+  ['oncargajuegoclicked',['onCargajuegoClicked',['../classprincipal_1_1_principal.html#a4ba524ec8f9f41be0813a93f52f063a2',1,'principal::Principal']]],
   ['oncolocarficha',['onColocarFicha',['../classsudoku_1_1_sudoku.html#ab90f4256f9ca764774df6c606dccb8bc',1,'sudoku::Sudoku']]],
   ['onnuevojuegoclicked',['onNuevojuegoClicked',['../classprincipal_1_1_principal.html#ad2d6ac1894d73e687162a5a3541f79e5',1,'principal::Principal']]],
   ['onpbcancelarclicked',['onPbcancelarClicked',['../classnuevojuego_1_1_nuevojuego.html#a29dbd3db7a9368c1ec8ea438e1a921d5',1,'nuevojuego::Nuevojuego']]],

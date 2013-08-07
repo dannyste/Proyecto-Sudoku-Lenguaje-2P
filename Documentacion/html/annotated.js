@@ -2,13 +2,23 @@ var annotated =
 [
     [ "acercade", "namespaceacercade.html", "namespaceacercade" ],
     [ "graficador", "namespacegraficador.html", "namespacegraficador" ],
-    [ "img_rc", "namespaceimg__rc.html", null ],
     [ "nuevojuego", "namespacenuevojuego.html", "namespacenuevojuego" ],
     [ "principal", "namespaceprincipal.html", "namespaceprincipal" ],
     [ "sudoku", "namespacesudoku.html", "namespacesudoku" ],
-    [ "ui_acercade", "namespaceui__acercade.html", "namespaceui__acercade" ],
-    [ "ui_nuevojuego", "namespaceui__nuevojuego.html", "namespaceui__nuevojuego" ],
-    [ "ui_principal", "namespaceui__principal.html", "namespaceui__principal" ],
-    [ "ui_sudoku", "namespaceui__sudoku.html", "namespaceui__sudoku" ],
+    [ "ui_acercade", null, [
+      [ "Ui_acercaDe", "classui__acercade_1_1_ui__acerca_de.html", "classui__acercade_1_1_ui__acerca_de" ]
+    ] ],
+    [ "ui_estadisticas", null, [
+      [ "Ui_estadisticas", "classui__estadisticas_1_1_ui__estadisticas.html", "classui__estadisticas_1_1_ui__estadisticas" ]
+    ] ],
+    [ "ui_nuevojuego", null, [
+      [ "Ui_NuevoJuego", "classui__nuevojuego_1_1_ui___nuevo_juego.html", "classui__nuevojuego_1_1_ui___nuevo_juego" ]
+    ] ],
+    [ "ui_principal", null, [
+      [ "Ui_principal", "classui__principal_1_1_ui__principal.html", "classui__principal_1_1_ui__principal" ]
+    ] ],
+    [ "ui_sudoku", null, [
+      [ "Ui_Sudoku", "classui__sudoku_1_1_ui___sudoku.html", "classui__sudoku_1_1_ui___sudoku" ]
+    ] ],
     [ "validador", "namespacevalidador.html", "namespacevalidador" ]
 ];

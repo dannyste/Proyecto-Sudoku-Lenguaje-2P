@@ -1,0 +1,172 @@
+\section{Referencia de la Clase validador.\-Validador}
+\label{classvalidador_1_1_validador}\index{validador.\-Validador@{validador.\-Validador}}
+
+
+Clase que maneja las validaciones del numero dentro del tablero.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf Relacionar}
+\item 
+def {\bf Validar\-Espacios\-Vacios}
+\item 
+def {\bf Sub\-Cuadros}
+\item 
+def {\bf Verificar\-Sub\-Cuadro}
+\item 
+def {\bf Validar\-X}
+\item 
+def {\bf Valida\-Linea}
+\item 
+def {\bf Validar\-Y}
+\item 
+def {\bf Valida\-Columna}
+\item 
+def {\bf Verifica\-Arreglo\-Indices}
+\item 
+def {\bf Validaciones}
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries sudoku}\label{classvalidador_1_1_validador_ab02c154c37d3454eb353a95a5aed20f8}
+
+\item 
+{\bfseries graficador}\label{classvalidador_1_1_validador_a526c2702b5b2c184889627da16f01df9}
+
+\item 
+{\bfseries Message\-Box}\label{classvalidador_1_1_validador_ad586789a4610f21e37909feea08fb221}
+
+\item 
+{\bfseries M\-B\-\_\-\-I\-C\-O\-N\-E\-R\-R\-O\-R}\label{classvalidador_1_1_validador_ac14bb6e1aeac4173c44a0596b611d3fd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase que maneja las validaciones del numero dentro del tablero. 
+
+
+
+\subsection{Documentación del constructor y destructor}
+\index{validador\-::\-Validador@{validador\-::\-Validador}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Sudoku}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a7504d5eaa60d9a8410ab9dcdf6e906f1}
+\begin{DoxyVerb}Contructor
+    Se Inicializa la variable del tablero para tener acceso a este y creamos un objeto de tipo graficador para poder pintar el tablero.
+    Parametro:
+    s El objeto padre de tipo Sudoku que crea a este objeto.\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{validador\-::\-Validador@{validador\-::\-Validador}!Relacionar@{Relacionar}}
+\index{Relacionar@{Relacionar}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Relacionar}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Relacionar (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_ae52c0b87f72d4d23b31d63a383eed6f3}
+\begin{DoxyVerb}Pasa de la imagen de la ficha a un entero que corresponde al numero de la imagen.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Sub\-Cuadros@{Sub\-Cuadros}}
+\index{Sub\-Cuadros@{Sub\-Cuadros}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Sub\-Cuadros}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Sub\-Cuadros (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a6a696985f736a08f0c4e68f4c41a696d}
+\begin{DoxyVerb}Extrae la subcuadricula en la que se va a buscar algun posible numero repetido.
+    Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Validaciones@{Validaciones}}
+\index{Validaciones@{Validaciones}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Validaciones}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Validaciones (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a38428f3a8424457f6d1fac000c22b826}
+\begin{DoxyVerb}Maneja todas las validaciones y muestra un mensaje al usuario de acuerdo al tipo de error.
+    Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Valida\-Columna@{Valida\-Columna}}
+\index{Valida\-Columna@{Valida\-Columna}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Valida\-Columna}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Valida\-Columna (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{j}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a181d6a109b73f81c7addfd28f4422855}
+\begin{DoxyVerb}Busca en la columna j si existe algun numero repetido.
+    Parametro: j Columna donde se buscara.
+    Retorna: Valor: 1 -> Correcto , 0 -> Existen numeros repetidos.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Valida\-Linea@{Valida\-Linea}}
+\index{Valida\-Linea@{Valida\-Linea}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Valida\-Linea}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Valida\-Linea (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a2e9acd907c83b25cb509598535b89199}
+\begin{DoxyVerb}Busca en la linea i si existe algun numero repetido.
+    Parametro: i Linea donde se buscara.
+    Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Validar\-Espacios\-Vacios@{Validar\-Espacios\-Vacios}}
+\index{Validar\-Espacios\-Vacios@{Validar\-Espacios\-Vacios}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Validar\-Espacios\-Vacios}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Validar\-Espacios\-Vacios (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_aa24ab8d3da4ac839f41cf4615637e2b2}
+\begin{DoxyVerb}Verifica si el en tablero hay algun espacio vacio
+    Retorna: 1 -> Completo , 0 -> Incompleto.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Validar\-X@{Validar\-X}}
+\index{Validar\-X@{Validar\-X}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Validar\-X}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Validar\-X (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_aaf155f90206e777346f6fc4b81a19880}
+\begin{DoxyVerb}Recorre el tablero linea a linea para encontrar numeros repetidos
+Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Validar\-Y@{Validar\-Y}}
+\index{Validar\-Y@{Validar\-Y}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Validar\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Validar\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a9c91760d11975839c73ccaf9586c9772}
+\begin{DoxyVerb}Recorre el tablero columna a columna para encontrar numeros repetidos
+    Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Verifica\-Arreglo\-Indices@{Verifica\-Arreglo\-Indices}}
+\index{Verifica\-Arreglo\-Indices@{Verifica\-Arreglo\-Indices}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Verifica\-Arreglo\-Indices}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Verifica\-Arreglo\-Indices (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{fichas}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a25eea8cc26b574744fc794cd0d8f9c4a}
+\begin{DoxyVerb}Verifica el numero de veces que se repite un numero.
+    Si algun numero se repite mas de una vez, entonces existe algun repetido.
+    Parametro: fichas Numero de ocurrencias de cada numero.
+    Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos.\end{DoxyVerb}
+ \index{validador\-::\-Validador@{validador\-::\-Validador}!Verificar\-Sub\-Cuadro@{Verificar\-Sub\-Cuadro}}
+\index{Verificar\-Sub\-Cuadro@{Verificar\-Sub\-Cuadro}!validador::Validador@{validador\-::\-Validador}}
+\subsubsection[{Verificar\-Sub\-Cuadro}]{\setlength{\rightskip}{0pt plus 5cm}def validador.\-Validador.\-Verificar\-Sub\-Cuadro (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classvalidador_1_1_validador_a64dc72d82bd892b5330d0584bc244cfb}
+\begin{DoxyVerb}Valida que no existan numeros repetidos en la subcuadricula.
+    En caso de haber algun numero repetido en la subcuadricula, se pinta dicha subcuadricula.
+    Retorna: 1 -> Correcto , 0 -> Existen numeros repetidos\end{DoxyVerb}
+ 
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Kevin/workspace/\-Sudoku\-Python/validador.\-py\end{DoxyCompactItemize}

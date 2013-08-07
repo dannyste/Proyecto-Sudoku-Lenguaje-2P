@@ -1,6 +1,7 @@
 var classsudoku_1_1_sudoku =
 [
     [ "__init__", "classsudoku_1_1_sudoku.html#a14eb9b8b5458e35cbed1faf30e761294", null ],
+    [ "cargarPartida", "classsudoku_1_1_sudoku.html#a686faf15eb72b43e46b639ca832c4f2f", null ],
     [ "convertirInttoImg", "classsudoku_1_1_sudoku.html#abf1e37a0ceed64e3c928ec5f1b029aa2", null ],
     [ "initArregloPistas", "classsudoku_1_1_sudoku.html#af983841e936a54c492cd19d1894fbd62", null ],
     [ "initCronometro", "classsudoku_1_1_sudoku.html#a3614de81f1066c542488693a403432da", null ],
@@ -46,6 +47,7 @@ var classsudoku_1_1_sudoku =
     [ "nroFichas", "classsudoku_1_1_sudoku.html#ace939fd0f2355c195b77d66a256cd6e7", null ],
     [ "nuevoTiempo", "classsudoku_1_1_sudoku.html#ab54f34d9121b3d949b15e26053121a60", null ],
     [ "numero", "classsudoku_1_1_sudoku.html#ad01be06931dc273aa73327c23923ddac", null ],
+    [ "partida", "classsudoku_1_1_sudoku.html#a1280aaf84aa65e77bfcc03d11487e671", null ],
     [ "posFichas", "classsudoku_1_1_sudoku.html#ae29c470920cd2318f8103d209e278a9f", null ],
     [ "resuelto", "classsudoku_1_1_sudoku.html#a8eb9dd56067013c106d40d66d16dbc54", null ],
     [ "segundos", "classsudoku_1_1_sudoku.html#a681d3ae6b17d362ee8e4e0b0985fe6b6", null ],

@@ -3,6 +3,7 @@ var hierarchy =
     [ "graficador.Graficador", "classgraficador_1_1_graficador.html", null ],
     [ "object", null, [
       [ "ui_acercade.Ui_acercaDe", "classui__acercade_1_1_ui__acerca_de.html", null ],
+      [ "ui_estadisticas.Ui_estadisticas", "classui__estadisticas_1_1_ui__estadisticas.html", null ],
       [ "ui_nuevojuego.Ui_NuevoJuego", "classui__nuevojuego_1_1_ui___nuevo_juego.html", null ],
       [ "ui_principal.Ui_principal", "classui__principal_1_1_ui__principal.html", null ],
       [ "ui_sudoku.Ui_Sudoku", "classui__sudoku_1_1_ui___sudoku.html", null ]

@@ -1,0 +1,457 @@
+\section{Referencia de la Clase sudoku.\-Sudoku}
+\label{classsudoku_1_1_sudoku}\index{sudoku.\-Sudoku@{sudoku.\-Sudoku}}
+
+
+Clase que maneja el tablero.  
+
+
+
+
+Diagrama de herencias de sudoku.\-Sudoku\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classsudoku_1_1_sudoku__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración para sudoku.\-Sudoku\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classsudoku_1_1_sudoku__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf init\-Cronometro}
+\item 
+def {\bf mostrar\-Tiempo}
+\item 
+def {\bf init\-Gui}
+\item 
+def {\bf on\-Colocar\-Ficha}
+\item 
+def {\bf init\-Arreglo\-Pistas}
+\item 
+def {\bf muestra\-Posibles\-Fichas}
+\item 
+def {\bf mostrar\-Pistas}
+\item 
+def {\bf opcion\-Ayuda}
+\item 
+def {\bf llena\-Tablero\-Dificultad}
+\item 
+def {\bf set\-Dificultad}
+\item 
+def {\bf convertir\-Intto\-Img}
+\item 
+def {\bf jugada\-Incorrecta}
+\item 
+def {\bf leer\-Archivo\-Sudoku\-Resuelto}
+\item 
+def {\bf intercambiar\-Filas}
+\item 
+def {\bf intercambiar\-Columnas}
+\item 
+def {\bf intercambiar\-Grupo\-Filas}
+\item 
+def {\bf intercambiar\-Grupo\-Columnas}
+\item 
+def {\bfseries cargar\-Partida}\label{classsudoku_1_1_sudoku_a686faf15eb72b43e46b639ca832c4f2f}
+
+\item 
+def {\bf on\-Pbf1\-Clicked}
+\item 
+def {\bf on\-Pbf2\-Clicked}
+\item 
+def {\bf on\-Pbf3\-Clicked}
+\item 
+def {\bf on\-Pbf4\-Clicked}
+\item 
+def {\bf on\-Pbf5\-Clicked}
+\item 
+def {\bf on\-Pbf6\-Clicked}
+\item 
+def {\bf on\-Pbf7\-Clicked}
+\item 
+def {\bf on\-Pbf8\-Clicked}
+\item 
+def {\bf on\-Pbf9\-Clicked}
+\item 
+def {\bf on\-Bt\-Help\-Clicked}
+\item 
+def {\bf on\-Actionnuevo\-\_\-juego\-Triggered}
+\item 
+def {\bf on\-Actionguardar\-Triggered}
+\item 
+def {\bf on\-Actionsalir\-Triggered}
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries ui}\label{classsudoku_1_1_sudoku_a10cba1664c1eb9e06b1e2be80e491146}
+
+\item 
+{\bfseries dificultad}\label{classsudoku_1_1_sudoku_a2967c1d8128e53194947c5663e70318f}
+
+\item 
+{\bfseries invalida}\label{classsudoku_1_1_sudoku_aaef20a252919abf513a901c247241a6a}
+
+\item 
+{\bfseries incorrecta}\label{classsudoku_1_1_sudoku_a4f4afd0b3785276e719f928474c119dd}
+
+\item 
+{\bfseries ayuda}\label{classsudoku_1_1_sudoku_aeb102933d828a4db322986df7ed9c9c5}
+
+\item 
+{\bfseries partida}\label{classsudoku_1_1_sudoku_a1280aaf84aa65e77bfcc03d11487e671}
+
+\item 
+{\bfseries ayudas}\label{classsudoku_1_1_sudoku_afa5ca87aebb8ea7451b34a357a13d47e}
+
+\item 
+{\bfseries validador}\label{classsudoku_1_1_sudoku_a0b10047ea545c0d20858f594ebb33a23}
+
+\item 
+{\bfseries Message\-Box}\label{classsudoku_1_1_sudoku_ac82ccedd2ad47903886a0d4d6d0dc72d}
+
+\item 
+{\bfseries M\-B\-\_\-\-I\-C\-O\-N\-E\-R\-R\-O\-R}\label{classsudoku_1_1_sudoku_a8b1333d2509e84421b8cd5e13b110895}
+
+\item 
+{\bfseries M\-B\-\_\-\-I\-C\-O\-N\-E\-X\-C\-L\-A\-M\-A\-T\-I\-O\-N}\label{classsudoku_1_1_sudoku_a3f05c83e09e7a9ebaa04bf758bc2564d}
+
+\item 
+{\bfseries tiempo}\label{classsudoku_1_1_sudoku_af197c9aad28be2bb614b53a7654999a6}
+
+\item 
+{\bfseries timer}\label{classsudoku_1_1_sudoku_a0da495ba22f336a9d6593d80be5e8a8a}
+
+\item 
+{\bfseries segundos}\label{classsudoku_1_1_sudoku_a681d3ae6b17d362ee8e4e0b0985fe6b6}
+
+\item 
+{\bfseries text}\label{classsudoku_1_1_sudoku_a3ef9b3cb73521c03fc13a55195371df6}
+
+\item 
+{\bfseries nuevo\-Tiempo}\label{classsudoku_1_1_sudoku_ab54f34d9121b3d949b15e26053121a60}
+
+\item 
+{\bfseries cronometro}\label{classsudoku_1_1_sudoku_aecc1384833d05b2f20df9ed4b085965c}
+
+\item 
+{\bfseries Bmetodo}\label{classsudoku_1_1_sudoku_abd8e43ea44fb20adb86165a0b36a1dcc}
+
+\item 
+{\bfseries cajas}\label{classsudoku_1_1_sudoku_ae70a9aa78c648f9bb01457db5e9ad14e}
+
+\item 
+{\bfseries numero}\label{classsudoku_1_1_sudoku_ad01be06931dc273aa73327c23923ddac}
+
+\item 
+{\bfseries pos\-Fichas}\label{classsudoku_1_1_sudoku_ae29c470920cd2318f8103d209e278a9f}
+
+\item 
+{\bfseries nro\-Fichas}\label{classsudoku_1_1_sudoku_ace939fd0f2355c195b77d66a256cd6e7}
+
+\item 
+{\bfseries resuelto}\label{classsudoku_1_1_sudoku_a8eb9dd56067013c106d40d66d16dbc54}
+
+\item 
+{\bfseries n}\label{classsudoku_1_1_sudoku_a622ecbe2563df85e66af316d2c075388}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase que maneja el tablero. 
+
+Aqui se genera el tablero de acuerdo con las especificaciones dadas desde la ventana de nuevo juego como las opciones de alerta, la dificultad y la ayuda. 
+
+\subsection{Documentación del constructor y destructor}
+\index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{dificultad, }
+\item[{}]{invalida, }
+\item[{}]{incorrecta, }
+\item[{}]{ayuda, }
+\item[{}]{partida}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a14eb9b8b5458e35cbed1faf30e761294}
+\begin{DoxyVerb}Contructor
+    *Crea una instancia de Sudoku de acuerdo a las especificaciones dadas por las variables de entrada.
+    *Se crea e inicia el cronometro.
+    Parametro:
+    - dificultad Dificultad del juego.
+    - incorrecta Determina si se realizan o no las validaciones de jugadas incorrectas.
+    - invalida Determina si se realizan o no las validaciones de jugadas invalidas.
+    - ayuda Determina si se activa o no el boton ayuda.\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!convertir\-Intto\-Img@{convertir\-Intto\-Img}}
+\index{convertir\-Intto\-Img@{convertir\-Intto\-Img}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{convertir\-Intto\-Img}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-convertir\-Intto\-Img (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_abf1e37a0ceed64e3c928ec5f1b029aa2}
+\begin{DoxyVerb}Convierte el numero que se encuentra el la matriz Modelo a una ficha.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!init\-Arreglo\-Pistas@{init\-Arreglo\-Pistas}}
+\index{init\-Arreglo\-Pistas@{init\-Arreglo\-Pistas}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{init\-Arreglo\-Pistas}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-init\-Arreglo\-Pistas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_af983841e936a54c492cd19d1894fbd62}
+\begin{DoxyVerb}Inicializa el arreglo al principio con fichas vacias\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!init\-Cronometro@{init\-Cronometro}}
+\index{init\-Cronometro@{init\-Cronometro}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{init\-Cronometro}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-init\-Cronometro (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a3614de81f1066c542488693a403432da}
+\begin{DoxyVerb}Inicia el contador del cronometro\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!init\-Gui@{init\-Gui}}
+\index{init\-Gui@{init\-Gui}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{init\-Gui}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-init\-Gui (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_ac33d986fc4b8d7f117a335a1cf972425}
+\begin{DoxyVerb}Inicializa la interfaz grafica del tablero
+    Se inicializa el tablero y luego se lo llena con el numero de fichas de acuerdo a la dificultad.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!intercambiar\-Columnas@{intercambiar\-Columnas}}
+\index{intercambiar\-Columnas@{intercambiar\-Columnas}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{intercambiar\-Columnas}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-intercambiar\-Columnas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_ac1bfe63c57091eba26b0a7798ebf651c}
+\begin{DoxyVerb}Realiza un intercambio aleatorio de las columnas dentro de las subcuadriculas\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!intercambiar\-Filas@{intercambiar\-Filas}}
+\index{intercambiar\-Filas@{intercambiar\-Filas}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{intercambiar\-Filas}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-intercambiar\-Filas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_ac0f0071bbf7e20b46db0922853e4f18c}
+\begin{DoxyVerb}Realiza un intercambio aleatorio de las filas dentro de las subcuadriculas\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!intercambiar\-Grupo\-Columnas@{intercambiar\-Grupo\-Columnas}}
+\index{intercambiar\-Grupo\-Columnas@{intercambiar\-Grupo\-Columnas}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{intercambiar\-Grupo\-Columnas}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-intercambiar\-Grupo\-Columnas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a88a5f6c4d65c50bce704e9baf37e9a6c}
+\begin{DoxyVerb}Realiza un intercambio aleatorio de columnas de subcuadriculas dentro del tablero\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!intercambiar\-Grupo\-Filas@{intercambiar\-Grupo\-Filas}}
+\index{intercambiar\-Grupo\-Filas@{intercambiar\-Grupo\-Filas}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{intercambiar\-Grupo\-Filas}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-intercambiar\-Grupo\-Filas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a056c8e4f7ca6d7a6e3ed65aac8c455c8}
+\begin{DoxyVerb}Realiza un intercambio aleatorio de filas de subcuadriculas dentro del tablero\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!jugada\-Incorrecta@{jugada\-Incorrecta}}
+\index{jugada\-Incorrecta@{jugada\-Incorrecta}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{jugada\-Incorrecta}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-jugada\-Incorrecta (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{indice}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a56bd70c70ad08e350a33f9eafd5747d5}
+\begin{DoxyVerb}Determina si la jugada es Incorrecta
+    *Compara el numero que el jugador desea colocar con el numero que esta en esa misma posicion del tablero solucionado.
+    Parametro: ind El indice del boton correspondiente al lugar donde el jugador desea colocar la ficha.
+    Retorna: 1 -> Incorrecto , 0 -> Correcto.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!leer\-Archivo\-Sudoku\-Resuelto@{leer\-Archivo\-Sudoku\-Resuelto}}
+\index{leer\-Archivo\-Sudoku\-Resuelto@{leer\-Archivo\-Sudoku\-Resuelto}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{leer\-Archivo\-Sudoku\-Resuelto}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-leer\-Archivo\-Sudoku\-Resuelto (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a199b4fbc1f49e61904a084c2a11d6ca7}
+\begin{DoxyVerb}Lee el archivo de texto encriptado y llena el arreglo con el sudoku resuelto\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!llena\-Tablero\-Dificultad@{llena\-Tablero\-Dificultad}}
+\index{llena\-Tablero\-Dificultad@{llena\-Tablero\-Dificultad}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{llena\-Tablero\-Dificultad}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-llena\-Tablero\-Dificultad (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_acbda245010d2545e9b37c7c1769e709f}
+\begin{DoxyVerb}Llena el tablero que se mostrara al jugador de acuerdo a la dificultad que se eligio
+    Se asigna el numero de fichas de acuerdo con la dificultad en posiciones aleatorias.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!mostrar\-Pistas@{mostrar\-Pistas}}
+\index{mostrar\-Pistas@{mostrar\-Pistas}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{mostrar\-Pistas}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-mostrar\-Pistas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_ad8cceb57016ac37ab305c54287876745}
+\begin{DoxyVerb}Agrega las posibles fichas en la ventana\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!mostrar\-Tiempo@{mostrar\-Tiempo}}
+\index{mostrar\-Tiempo@{mostrar\-Tiempo}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{mostrar\-Tiempo}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-mostrar\-Tiempo (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a79a4ebb6cba45ec5aa3464c70f12535a}
+\begin{DoxyVerb}Controla el aumento de los segundos\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!muestra\-Posibles\-Fichas@{muestra\-Posibles\-Fichas}}
+\index{muestra\-Posibles\-Fichas@{muestra\-Posibles\-Fichas}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{muestra\-Posibles\-Fichas}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-muestra\-Posibles\-Fichas (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{caja}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_af086075fea0c4691e901ccb64b92f0d2}
+\begin{DoxyVerb}Muestra las fichas que son validas para esa posicion.
+    Parametro: button Boton en la posicion donde se desea colocar la ficha.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Actionguardar\-Triggered@{on\-Actionguardar\-Triggered}}
+\index{on\-Actionguardar\-Triggered@{on\-Actionguardar\-Triggered}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Actionguardar\-Triggered}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Actionguardar\-Triggered (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a04e410b502daf2b7dba261c7c1890fa8}
+\begin{DoxyVerb}Guarda la partida actual
+    Se pide el nombre con el que se desea guardar la partida y luego se procede a grabarla con encriptacion.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Actionnuevo\-\_\-juego\-Triggered@{on\-Actionnuevo\-\_\-juego\-Triggered}}
+\index{on\-Actionnuevo\-\_\-juego\-Triggered@{on\-Actionnuevo\-\_\-juego\-Triggered}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Actionnuevo\-\_\-juego\-Triggered}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Actionnuevo\-\_\-juego\-Triggered (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a9d461c3559ed288877a00055da014eba}
+\begin{DoxyVerb}Despliega la ventana de nuevo juego\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Actionsalir\-Triggered@{on\-Actionsalir\-Triggered}}
+\index{on\-Actionsalir\-Triggered@{on\-Actionsalir\-Triggered}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Actionsalir\-Triggered}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Actionsalir\-Triggered (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_aa96e09f95d70580e45a0af6e23e4ab64}
+\begin{DoxyVerb}Salir de la partida actual.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Bt\-Help\-Clicked@{on\-Bt\-Help\-Clicked}}
+\index{on\-Bt\-Help\-Clicked@{on\-Bt\-Help\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Bt\-Help\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Bt\-Help\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a18055f16332f25d54471b01ad7a4283b}
+\begin{DoxyVerb}Setea el numero 0 que indicara que se va a colocar el numero correcto automaticamente.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Colocar\-Ficha@{on\-Colocar\-Ficha}}
+\index{on\-Colocar\-Ficha@{on\-Colocar\-Ficha}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Colocar\-Ficha}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Colocar\-Ficha (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_ab90f4256f9ca764774df6c606dccb8bc}
+\begin{DoxyVerb}Slot que se ejecuta cada vez que se presione en algun boton dentro del tablero
+ Determina que accion se realiza al pulsar la ficha en el tablero.
+ Controla que tipo de validacion se realiza.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf1\-Clicked@{on\-Pbf1\-Clicked}}
+\index{on\-Pbf1\-Clicked@{on\-Pbf1\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf1\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf1\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_af636ad3dd5ecf0586b5a0cc11bbc0e78}
+\begin{DoxyVerb}Setea el numero 1 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf2\-Clicked@{on\-Pbf2\-Clicked}}
+\index{on\-Pbf2\-Clicked@{on\-Pbf2\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf2\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf2\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a2da5196b891674fe7d9e4f1c12b8f3d4}
+\begin{DoxyVerb}Setea el numero 2 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf3\-Clicked@{on\-Pbf3\-Clicked}}
+\index{on\-Pbf3\-Clicked@{on\-Pbf3\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf3\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf3\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a36c26f1d64db573765430a916a4b845a}
+\begin{DoxyVerb}Setea el numero 3 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf4\-Clicked@{on\-Pbf4\-Clicked}}
+\index{on\-Pbf4\-Clicked@{on\-Pbf4\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf4\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf4\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a6f13726fd8cad20874d2f66c93fb6a7a}
+\begin{DoxyVerb}Setea el numero 4 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf5\-Clicked@{on\-Pbf5\-Clicked}}
+\index{on\-Pbf5\-Clicked@{on\-Pbf5\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf5\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf5\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a0e6b40f43c2846d6895866461df4904a}
+\begin{DoxyVerb}Setea el numero 5 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf6\-Clicked@{on\-Pbf6\-Clicked}}
+\index{on\-Pbf6\-Clicked@{on\-Pbf6\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf6\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf6\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_abb607fa3fc51befda78e7425b7200ddd}
+\begin{DoxyVerb}Setea el numero 6 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf7\-Clicked@{on\-Pbf7\-Clicked}}
+\index{on\-Pbf7\-Clicked@{on\-Pbf7\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf7\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf7\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_af42f0ecb5c36080dbe2a03d00e92c0aa}
+\begin{DoxyVerb}Setea el numero 7 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf8\-Clicked@{on\-Pbf8\-Clicked}}
+\index{on\-Pbf8\-Clicked@{on\-Pbf8\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf8\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf8\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a85eed190edf1bbfe3cb4908bb71377ee}
+\begin{DoxyVerb}Setea el numero 8 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!on\-Pbf9\-Clicked@{on\-Pbf9\-Clicked}}
+\index{on\-Pbf9\-Clicked@{on\-Pbf9\-Clicked}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{on\-Pbf9\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-on\-Pbf9\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a86fc5361d5e951a1b4ee39d9b0203a02}
+\begin{DoxyVerb}Setea el numero 9 siendo esta ficha la que el jugador quiere colocar en alguna parte del tablero.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!opcion\-Ayuda@{opcion\-Ayuda}}
+\index{opcion\-Ayuda@{opcion\-Ayuda}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{opcion\-Ayuda}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-opcion\-Ayuda (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{caja}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_ab5193226c263210588b833b0a24e5cdf}
+\begin{DoxyVerb}Maneja la opcion cuando el jugador activa la ayuda
+    Parametro: b El boton que corresponde al lugar del tablero donde el jugador desea se coloque el numero correcto.\end{DoxyVerb}
+ \index{sudoku\-::\-Sudoku@{sudoku\-::\-Sudoku}!set\-Dificultad@{set\-Dificultad}}
+\index{set\-Dificultad@{set\-Dificultad}!sudoku::Sudoku@{sudoku\-::\-Sudoku}}
+\subsubsection[{set\-Dificultad}]{\setlength{\rightskip}{0pt plus 5cm}def sudoku.\-Sudoku.\-set\-Dificultad (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classsudoku_1_1_sudoku_a291d09df1082915d723befb440762013}
+\begin{DoxyVerb}Lee la dificultad y se asigna el numero de fichas correspondiente a dicha dificultad.\end{DoxyVerb}
+ 
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Kevin/workspace/\-Sudoku\-Python/sudoku.\-py\end{DoxyCompactItemize}

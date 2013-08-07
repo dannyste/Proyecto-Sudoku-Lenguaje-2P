@@ -1,0 +1,103 @@
+\section{Referencia de la Clase nuevojuego.\-Nuevojuego}
+\label{classnuevojuego_1_1_nuevojuego}\index{nuevojuego.\-Nuevojuego@{nuevojuego.\-Nuevojuego}}
+
+
+Clase que corresponde a la ventana de configuracion de opciones para un nuevo juego.  
+
+
+
+
+Diagrama de herencias de nuevojuego.\-Nuevojuego\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classnuevojuego_1_1_nuevojuego__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración para nuevojuego.\-Nuevojuego\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classnuevojuego_1_1_nuevojuego__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf on\-Pbjugar\-Clicked}
+\item 
+def {\bf on\-Pbcancelar\-Clicked}
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries ui}\label{classnuevojuego_1_1_nuevojuego_adbc8ceb5e6313982e76998d8632c165b}
+
+\item 
+{\bfseries Message\-Box}\label{classnuevojuego_1_1_nuevojuego_a0d82932930ca81e673f98e7752fb3401}
+
+\item 
+{\bfseries M\-B\-\_\-\-I\-C\-O\-N\-E\-R\-R\-O\-R}\label{classnuevojuego_1_1_nuevojuego_a7dd494e130a721a07a5e4fbf8fbaf26c}
+
+\item 
+{\bfseries n}\label{classnuevojuego_1_1_nuevojuego_af9b393a290e8f6a0ffd42a5e0c652549}
+
+\item 
+{\bfseries p}\label{classnuevojuego_1_1_nuevojuego_acf09514a8d20e997010bec0eab31105c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase que corresponde a la ventana de configuracion de opciones para un nuevo juego. 
+
+Aqui se mostraran 3 secciones\-:
+
+-\/-\/---$>$Dificultad. Se escogen la dificultad deseada.
+
+-\/-\/---$>$Opciones de Alerta. Se escoge que tipos de alerta queremos que nos de la aplicacion al momento de jugar.
+
+-\/-\/---$>$Ayuda. Activamos o desactivamos el boton de ayuda. 
+
+\subsection{Documentación del constructor y destructor}
+\index{nuevojuego\-::\-Nuevojuego@{nuevojuego\-::\-Nuevojuego}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!nuevojuego::Nuevojuego@{nuevojuego\-::\-Nuevojuego}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def nuevojuego.\-Nuevojuego.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classnuevojuego_1_1_nuevojuego_aa4e038a99366e2cf8a6a88fdbb863b15}
+\begin{DoxyVerb}Contructor
+    Setea uno de los dos checkbox de alertas en true y anade el fondo a la ventana.\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{nuevojuego\-::\-Nuevojuego@{nuevojuego\-::\-Nuevojuego}!on\-Pbcancelar\-Clicked@{on\-Pbcancelar\-Clicked}}
+\index{on\-Pbcancelar\-Clicked@{on\-Pbcancelar\-Clicked}!nuevojuego::Nuevojuego@{nuevojuego\-::\-Nuevojuego}}
+\subsubsection[{on\-Pbcancelar\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def nuevojuego.\-Nuevojuego.\-on\-Pbcancelar\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classnuevojuego_1_1_nuevojuego_a29dbd3db7a9368c1ec8ea438e1a921d5}
+\begin{DoxyVerb}Despliega la ventana anterior
+    Crea una instancia de la ventana principal y la muestra\end{DoxyVerb}
+ \index{nuevojuego\-::\-Nuevojuego@{nuevojuego\-::\-Nuevojuego}!on\-Pbjugar\-Clicked@{on\-Pbjugar\-Clicked}}
+\index{on\-Pbjugar\-Clicked@{on\-Pbjugar\-Clicked}!nuevojuego::Nuevojuego@{nuevojuego\-::\-Nuevojuego}}
+\subsubsection[{on\-Pbjugar\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}def nuevojuego.\-Nuevojuego.\-on\-Pbjugar\-Clicked (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classnuevojuego_1_1_nuevojuego_a3dd0f97658c3b305f428260a7d80252d}
+\begin{DoxyVerb}Despliega la ventana con el tablero para empezar el juego
+    *Crea una instancia de la clase Sudoku y la muestra.
+    *Verificara que se halla escogido un solo nivel de dificultad.
+    *Verificara que halla escogido al menos una opcion de alerta.\end{DoxyVerb}
+ 
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Kevin/workspace/\-Sudoku\-Python/nuevojuego.\-py\end{DoxyCompactItemize}

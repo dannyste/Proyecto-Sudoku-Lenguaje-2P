@@ -50,6 +50,7 @@ class Principal(QMainWindow):
         self.close()
         
     def onCargajuegoClicked(self):
+        """Nos permite Cargar un juego anteriormente guardado"""
         (nombre,ok) = QInputDialog.getText(self, self.tr("Sudoku"), self.tr("Nombre:"),QLineEdit.Normal, self.tr(""))
         if ok==True:
             while str(nombre)=="" and ok==True:

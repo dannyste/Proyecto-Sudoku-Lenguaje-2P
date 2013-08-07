@@ -1,0 +1,107 @@
+\section{Referencia de la Clase graficador.\-Graficador}
+\label{classgraficador_1_1_graficador}\index{graficador.\-Graficador@{graficador.\-Graficador}}
+
+
+clase que se encarga de manejar el color en las fichas en caso de error.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf init\-Arreglo\-Img\-Fichas}
+\item 
+def {\bf pinta\-X}
+\item 
+def {\bf pinta\-Y}
+\item 
+def {\bf pinta\-Sub}
+\item 
+def {\bf pinta\-Tablero}
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries sudoku}\label{classgraficador_1_1_graficador_ad833c980c323cc0a8f0c5449b6904410}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+clase que se encarga de manejar el color en las fichas en caso de error. 
+
+Es utilizada por la clase Sudoku para colorear las fichas cuando existe error en X, en Y, o en la Subcuadricula. 
+
+\subsection{Documentación del constructor y destructor}
+\index{graficador\-::\-Graficador@{graficador\-::\-Graficador}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!graficador::Graficador@{graficador\-::\-Graficador}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def graficador.\-Graficador.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Sudoku}
+\end{DoxyParamCaption}
+)}\label{classgraficador_1_1_graficador_abf8e67f545b6c08c6e79a86161fe4dea}
+\begin{DoxyVerb}Constructor
+   parametro:
+    s - Nos da la referencia al objeto Sudoku que la crea, para poder acceder a sus variables\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{graficador\-::\-Graficador@{graficador\-::\-Graficador}!init\-Arreglo\-Img\-Fichas@{init\-Arreglo\-Img\-Fichas}}
+\index{init\-Arreglo\-Img\-Fichas@{init\-Arreglo\-Img\-Fichas}!graficador::Graficador@{graficador\-::\-Graficador}}
+\subsubsection[{init\-Arreglo\-Img\-Fichas}]{\setlength{\rightskip}{0pt plus 5cm}def graficador.\-Graficador.\-init\-Arreglo\-Img\-Fichas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classgraficador_1_1_graficador_aa3d6857907dfdcc6612c474cd9a481f7}
+\begin{DoxyVerb}Inicializa un arreglo de Iconos del 1 - 9
+    Se asigna a cada elemento del arreglo la imagen de la ficha correspondiente al indice del arreglo.\end{DoxyVerb}
+ \index{graficador\-::\-Graficador@{graficador\-::\-Graficador}!pinta\-Sub@{pinta\-Sub}}
+\index{pinta\-Sub@{pinta\-Sub}!graficador::Graficador@{graficador\-::\-Graficador}}
+\subsubsection[{pinta\-Sub}]{\setlength{\rightskip}{0pt plus 5cm}def graficador.\-Graficador.\-pinta\-Sub (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\label{classgraficador_1_1_graficador_a103831199e9c31836af0698f1ca64483}
+\begin{DoxyVerb}Pinta una subcuadricula determinada del tablero cuando hay un error
+    Parametro:
+x La fila desde donde empieza la subccuadricula en la que se quiere colocar una ficha invalida o incorrecta.
+y La columna desde donde empieza la subccuadricula en la que se quiere colocar una ficha invalida o incorrecta\end{DoxyVerb}
+ \index{graficador\-::\-Graficador@{graficador\-::\-Graficador}!pinta\-Tablero@{pinta\-Tablero}}
+\index{pinta\-Tablero@{pinta\-Tablero}!graficador::Graficador@{graficador\-::\-Graficador}}
+\subsubsection[{pinta\-Tablero}]{\setlength{\rightskip}{0pt plus 5cm}def graficador.\-Graficador.\-pinta\-Tablero (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classgraficador_1_1_graficador_afb03ec9aafb4068f04ae26d811297edb}
+\begin{DoxyVerb}Pinta completamente tablero\end{DoxyVerb}
+ \index{graficador\-::\-Graficador@{graficador\-::\-Graficador}!pinta\-X@{pinta\-X}}
+\index{pinta\-X@{pinta\-X}!graficador::Graficador@{graficador\-::\-Graficador}}
+\subsubsection[{pinta\-X}]{\setlength{\rightskip}{0pt plus 5cm}def graficador.\-Graficador.\-pinta\-X (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)}\label{classgraficador_1_1_graficador_a81ed80fb663126b07bb6fc9a20a72d5b}
+\begin{DoxyVerb}Pinta una fila determinada del tablero cuando hay un error
+   parametro:
+   i La fila en la que se quiere colocar una ficha invalida o incorrecta\end{DoxyVerb}
+ \index{graficador\-::\-Graficador@{graficador\-::\-Graficador}!pinta\-Y@{pinta\-Y}}
+\index{pinta\-Y@{pinta\-Y}!graficador::Graficador@{graficador\-::\-Graficador}}
+\subsubsection[{pinta\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def graficador.\-Graficador.\-pinta\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{j}
+\end{DoxyParamCaption}
+)}\label{classgraficador_1_1_graficador_a7f56a09fa17b5a5aaf7292bff6c2d711}
+\begin{DoxyVerb}Pinta una columna determinada del tablero cuando hay un error
+   parametro:
+       j La columna en la que se quiere colocar una ficha invalida o incorrecta\end{DoxyVerb}
+ 
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Kevin/workspace/\-Sudoku\-Python/graficador.\-py\end{DoxyCompactItemize}

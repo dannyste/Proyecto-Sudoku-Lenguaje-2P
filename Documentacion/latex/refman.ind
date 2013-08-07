@@ -1,0 +1,238 @@
+\begin{theindex}
+
+  \item {\-\_\-\-\_\-init\-\_\-\-\_\-}
+    \subitem {acercade\-::\-Acercade}, 10
+    \subitem {graficador\-::\-Graficador}, 11
+    \subitem {nuevojuego\-::\-Nuevojuego}, 13
+    \subitem {principal\-::\-Principal}, 14
+    \subitem {sudoku\-::\-Sudoku}, 17
+    \subitem {validador\-::\-Validador}, 27
+
+  \indexspace
+
+  \item {acercade}, 7
+  \item {acercade.\-Acercade}, 9
+  \item {acercade\-::\-Acercade}
+    \subitem {\-\_\-\-\_\-init\-\_\-\-\_\-}, 10
+    \subitem {on\-Pushbutton\-Clicked}, 10
+
+  \indexspace
+
+  \item {convertir\-Intto\-Img}
+    \subitem {sudoku\-::\-Sudoku}, 17
+
+  \indexspace
+
+  \item {graficador}, 7
+  \item {graficador.\-Graficador}, 10
+  \item {graficador\-::\-Graficador}
+    \subitem {\-\_\-\-\_\-init\-\_\-\-\_\-}, 11
+    \subitem {init\-Arreglo\-Img\-Fichas}, 11
+    \subitem {pinta\-Sub}, 11
+    \subitem {pinta\-Tablero}, 11
+    \subitem {pinta\-X}, 11
+    \subitem {pinta\-Y}, 11
+
+  \indexspace
+
+  \item {init\-Arreglo\-Img\-Fichas}
+    \subitem {graficador\-::\-Graficador}, 11
+  \item {init\-Arreglo\-Pistas}
+    \subitem {sudoku\-::\-Sudoku}, 17
+  \item {init\-Cronometro}
+    \subitem {sudoku\-::\-Sudoku}, 18
+  \item {init\-Gui}
+    \subitem {sudoku\-::\-Sudoku}, 18
+  \item {intercambiar\-Columnas}
+    \subitem {sudoku\-::\-Sudoku}, 18
+  \item {intercambiar\-Filas}
+    \subitem {sudoku\-::\-Sudoku}, 18
+  \item {intercambiar\-Grupo\-Columnas}
+    \subitem {sudoku\-::\-Sudoku}, 18
+  \item {intercambiar\-Grupo\-Filas}
+    \subitem {sudoku\-::\-Sudoku}, 18
+
+  \indexspace
+
+  \item {jugada\-Incorrecta}
+    \subitem {sudoku\-::\-Sudoku}, 18
+
+  \indexspace
+
+  \item {leer\-Archivo\-Sudoku\-Resuelto}
+    \subitem {sudoku\-::\-Sudoku}, 18
+  \item {llena\-Tablero\-Dificultad}
+    \subitem {sudoku\-::\-Sudoku}, 18
+
+  \indexspace
+
+  \item {mostrar\-Pistas}
+    \subitem {sudoku\-::\-Sudoku}, 18
+  \item {mostrar\-Tiempo}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {muestra\-Posibles\-Fichas}
+    \subitem {sudoku\-::\-Sudoku}, 19
+
+  \indexspace
+
+  \item {nuevojuego}, 7
+  \item {nuevojuego.\-Nuevojuego}, 11
+  \item {nuevojuego\-::\-Nuevojuego}
+    \subitem {\-\_\-\-\_\-init\-\_\-\-\_\-}, 13
+    \subitem {on\-Pbcancelar\-Clicked}, 13
+    \subitem {on\-Pbjugar\-Clicked}, 13
+
+  \indexspace
+
+  \item {on\-Acercade\-Clicked}
+    \subitem {principal\-::\-Principal}, 15
+  \item {on\-Actionguardar\-Triggered}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Actionnuevo\-\_\-juego\-Triggered}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Actionsalir\-Triggered}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Bt\-Help\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Cargajuego\-Clicked}
+    \subitem {principal\-::\-Principal}, 15
+  \item {on\-Colocar\-Ficha}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Nuevojuego\-Clicked}
+    \subitem {principal\-::\-Principal}, 15
+  \item {on\-Pbcancelar\-Clicked}
+    \subitem {nuevojuego\-::\-Nuevojuego}, 13
+  \item {on\-Pbf1\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Pbf2\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Pbf3\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 19
+  \item {on\-Pbf4\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 20
+  \item {on\-Pbf5\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 20
+  \item {on\-Pbf6\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 20
+  \item {on\-Pbf7\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 20
+  \item {on\-Pbf8\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 20
+  \item {on\-Pbf9\-Clicked}
+    \subitem {sudoku\-::\-Sudoku}, 20
+  \item {on\-Pbjugar\-Clicked}
+    \subitem {nuevojuego\-::\-Nuevojuego}, 13
+  \item {on\-Pushbutton\-Clicked}
+    \subitem {acercade\-::\-Acercade}, 10
+  \item {on\-Salir\-Clicked}
+    \subitem {principal\-::\-Principal}, 15
+  \item {opcion\-Ayuda}
+    \subitem {sudoku\-::\-Sudoku}, 20
+
+  \indexspace
+
+  \item {pinta\-Sub}
+    \subitem {graficador\-::\-Graficador}, 11
+  \item {pinta\-Tablero}
+    \subitem {graficador\-::\-Graficador}, 11
+  \item {pinta\-X}
+    \subitem {graficador\-::\-Graficador}, 11
+  \item {pinta\-Y}
+    \subitem {graficador\-::\-Graficador}, 11
+  \item {principal}, 8
+  \item {principal.\-Principal}, 13
+  \item {principal\-::\-Principal}
+    \subitem {\-\_\-\-\_\-init\-\_\-\-\_\-}, 14
+    \subitem {on\-Acercade\-Clicked}, 15
+    \subitem {on\-Cargajuego\-Clicked}, 15
+    \subitem {on\-Nuevojuego\-Clicked}, 15
+    \subitem {on\-Salir\-Clicked}, 15
+
+  \indexspace
+
+  \item {Relacionar}
+    \subitem {validador\-::\-Validador}, 27
+
+  \indexspace
+
+  \item {set\-Dificultad}
+    \subitem {sudoku\-::\-Sudoku}, 20
+  \item {Sub\-Cuadros}
+    \subitem {validador\-::\-Validador}, 27
+  \item {sudoku}, 8
+  \item {sudoku.\-Sudoku}, 15
+  \item {sudoku\-::\-Sudoku}
+    \subitem {\-\_\-\-\_\-init\-\_\-\-\_\-}, 17
+    \subitem {convertir\-Intto\-Img}, 17
+    \subitem {init\-Arreglo\-Pistas}, 17
+    \subitem {init\-Cronometro}, 18
+    \subitem {init\-Gui}, 18
+    \subitem {intercambiar\-Columnas}, 18
+    \subitem {intercambiar\-Filas}, 18
+    \subitem {intercambiar\-Grupo\-Columnas}, 18
+    \subitem {intercambiar\-Grupo\-Filas}, 18
+    \subitem {jugada\-Incorrecta}, 18
+    \subitem {leer\-Archivo\-Sudoku\-Resuelto}, 18
+    \subitem {llena\-Tablero\-Dificultad}, 18
+    \subitem {mostrar\-Pistas}, 18
+    \subitem {mostrar\-Tiempo}, 19
+    \subitem {muestra\-Posibles\-Fichas}, 19
+    \subitem {on\-Actionguardar\-Triggered}, 19
+    \subitem {on\-Actionnuevo\-\_\-juego\-Triggered}, 19
+    \subitem {on\-Actionsalir\-Triggered}, 19
+    \subitem {on\-Bt\-Help\-Clicked}, 19
+    \subitem {on\-Colocar\-Ficha}, 19
+    \subitem {on\-Pbf1\-Clicked}, 19
+    \subitem {on\-Pbf2\-Clicked}, 19
+    \subitem {on\-Pbf3\-Clicked}, 19
+    \subitem {on\-Pbf4\-Clicked}, 20
+    \subitem {on\-Pbf5\-Clicked}, 20
+    \subitem {on\-Pbf6\-Clicked}, 20
+    \subitem {on\-Pbf7\-Clicked}, 20
+    \subitem {on\-Pbf8\-Clicked}, 20
+    \subitem {on\-Pbf9\-Clicked}, 20
+    \subitem {opcion\-Ayuda}, 20
+    \subitem {set\-Dificultad}, 20
+
+  \indexspace
+
+  \item {ui\-\_\-acercade.\-Ui\-\_\-acerca\-De}, 21
+  \item {ui\-\_\-estadisticas.\-Ui\-\_\-estadisticas}, 22
+  \item {ui\-\_\-nuevojuego.\-Ui\-\_\-\-Nuevo\-Juego}, 23
+  \item {ui\-\_\-principal.\-Ui\-\_\-principal}, 24
+  \item {ui\-\_\-sudoku.\-Ui\-\_\-\-Sudoku}, 25
+
+  \indexspace
+
+  \item {Valida\-Columna}
+    \subitem {validador\-::\-Validador}, 27
+  \item {Valida\-Linea}
+    \subitem {validador\-::\-Validador}, 27
+  \item {Validaciones}
+    \subitem {validador\-::\-Validador}, 27
+  \item {validador}, 8
+  \item {validador.\-Validador}, 26
+  \item {validador\-::\-Validador}
+    \subitem {\-\_\-\-\_\-init\-\_\-\-\_\-}, 27
+    \subitem {Relacionar}, 27
+    \subitem {Sub\-Cuadros}, 27
+    \subitem {Valida\-Columna}, 27
+    \subitem {Valida\-Linea}, 27
+    \subitem {Validaciones}, 27
+    \subitem {Validar\-Espacios\-Vacios}, 27
+    \subitem {Validar\-X}, 27
+    \subitem {Validar\-Y}, 27
+    \subitem {Verifica\-Arreglo\-Indices}, 28
+    \subitem {Verificar\-Sub\-Cuadro}, 28
+  \item {Validar\-Espacios\-Vacios}
+    \subitem {validador\-::\-Validador}, 27
+  \item {Validar\-X}
+    \subitem {validador\-::\-Validador}, 27
+  \item {Validar\-Y}
+    \subitem {validador\-::\-Validador}, 27
+  \item {Verifica\-Arreglo\-Indices}
+    \subitem {validador\-::\-Validador}, 28
+  \item {Verificar\-Sub\-Cuadro}
+    \subitem {validador\-::\-Validador}, 28
+
+\end{theindex}
