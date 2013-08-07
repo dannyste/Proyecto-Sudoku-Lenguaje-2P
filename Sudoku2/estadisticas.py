@@ -17,17 +17,17 @@ class estadisticas(QMainWindow):
         self.ui.twEstadisticas.setColumnCount(2)
         headers=["Jugadores","Tiempo"]
         self.ui.twEstadisticas.setHorizontalHeaderLabels(headers)
-        archivo=open("Partidas.txt","r")
+        archivo=open("Ganadores.txt","r")
         linea=archivo.readline()
         partida=linea.split(",")
         nombreG=partida[0]
-        cronometro=partida[2]
+        cronometro=partida[1]
         j=0
         while linea!="": 
             self.ui.twEstadisticas.insertRow( self.ui.twEstadisticas.rowCount() )
             partida=linea.split(",")
             nombreG=partida[0]
-            cronometro=partida[2] 
+            cronometro=partida[1] 
             item1 = QTableWidgetItem()
             item2 = QTableWidgetItem()  
             item1.setText("%s" % nombreG )

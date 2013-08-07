@@ -347,7 +347,27 @@ class Sudoku(QMainWindow):
         k=0
         for i in range(9):
             for j in range(9):
-                self.cajas[i][j].setAccessibleName(juego[k])
+                if juego[k]=="j":
+                    self.cajas[i][j].setAccessibleName("0")
+                elif juego[k]=="n":
+                    self.cajas[i][j].setAccessibleName("1")
+                elif juego[k]=="l":
+                    self.cajas[i][j].setAccessibleName("2")
+                elif juego[k]=="d":
+                    self.cajas[i][j].setAccessibleName("3")
+                elif juego[k]=="y":
+                    self.cajas[i][j].setAccessibleName("4")
+                elif juego[k]=="s":
+                    self.cajas[i][j].setAccessibleName("5")
+                elif juego[k]=="t":
+                    self.cajas[i][j].setAccessibleName("6")
+                elif juego[k]=="v":
+                    self.cajas[i][j].setAccessibleName("7")
+                elif juego[k]=="a":
+                    self.cajas[i][j].setAccessibleName("8")
+                elif juego[k]=="e":
+                    self.cajas[i][j].setAccessibleName("9")
+                    
                 k = k + 1
         self.validador.Relacionar()
         self.convertirInttoImg()
@@ -448,7 +468,26 @@ class Sudoku(QMainWindow):
                 archivo.write(",")
                 for i in range(9):
                     for j in range(9):
-                        archivo.write(str(self.numeros[i][j]))
+                        if self.numeros[i][j]==0:
+                            archivo.write("j")
+                        elif self.numeros[i][j]==1:
+                            archivo.write("n")
+                        elif self.numeros[i][j]==2:
+                            archivo.write("l")
+                        elif self.numeros[i][j]==3:
+                            archivo.write("d")
+                        elif self.numeros[i][j]==4:
+                            archivo.write("y")
+                        elif self.numeros[i][j]==5:
+                            archivo.write("s")
+                        elif self.numeros[i][j]==6:
+                            archivo.write("t")
+                        elif self.numeros[i][j]==7:
+                            archivo.write("v")
+                        elif self.numeros[i][j]==8:
+                            archivo.write("a")
+                        else:
+                            archivo.write("e")
                 archivo.write(",")
                 archivo.write(self.cronometro)
                 if self.invalida:
